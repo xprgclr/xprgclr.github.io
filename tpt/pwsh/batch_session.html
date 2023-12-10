@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>bonus_session</title>
+  </head>
+  <body>
+    <div style="display:inline-block;white-space:pre;background-color:#282C34;font-family:'Cascadia Mono',monospace;font-size:12pt;padding:4px;"><span
+style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ls<br></span><span style="color:#98C379;background-color:#282C34;">batch.sh</span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#61AFEF;background-color:#282C34;">inst</span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#61AFEF;background-color:#282C34;">oldPS</span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#61AFEF;background-color:#282C34;">tests</span><span
+style="color:#DCDFE4;background-color:#282C34;">  v10.awk  v10.ps1  v7.awk  v7.ps1  v8.awk  v8.ps1  v9.awk  v9.ps1  </span><span
+style="color:#61AFEF;background-color:#282C34;">vsc<br></span><span style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ cat ./batch.sh | highlight -O ansi -S bash<br></span><span
+style="color:#61AFEF;background-color:#282C34;">#!/bin/bash<br><br># Запуск по:<br># echo 0 1 2 5 true false five | ./batch.sh v9<br># Или просто:<br># ./batch.sh<br># Можно запускать без указания данных в трубе и/или имени файла в аргументах скрипта - тогда подставятся значения по умо<br>лчанию.<br># Значения по умолчанию применяются как для имени файла, так и для данных в трубе.<br># Тестировал только на своём варианте.Можно попробовать и с другими вариантами, но я думаю что<br># В лучшем случае съедет форматирование первой строчки # т.к у меня отключен перевод на новую строку -<br># для компактности вывода работы скрипта именно моего варианта.<br># В худшем случае они не выполнятся т.к некоторые ps1 скрипты ожидают только int значения, а не строки ("test","true","f<br>alse")<br># А в некоторых скриптах данные ожидаются не по трубе, а в виде параметра.<br>########################################################################################################################<br>###<br><br><br># Значение по умолчанию для имени файла, без расширения (чтобы не вводить две переменные для*.awk и *.ps1 файла,<br># различающихся только расширением (проще прибавить строку расширения к этой переменной, когда будем к ней обращаться)<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">default_file_name=</span><span style="color:#E06C75;background-color:#282C34;">"v9"<br><br></span><span
+style="color:#61AFEF;background-color:#282C34;"># Значение по умолчанию для передаваемых данных по трубе, если мы их не ввели<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">default_pipe_data=(</span><span
+style="color:#61AFEF;background-color:#282C34;">0 1 2 </span><span style="color:#DCDFE4;background-color:#282C34;">true false </span><span
+style="color:#98C379;background-color:#282C34;">test</span><span style="color:#DCDFE4;background-color:#282C34;">)<br><br></span><span
+style="color:#61AFEF;background-color:#282C34;"># Вырубаем отладку, она только мешает тут<br></span><span
+style="color:#98C379;background-color:#282C34;">set </span><span style="color:#DCDFE4;background-color:#282C34;">+x<br><br></span><span
+style="color:#61AFEF;background-color:#282C34;"># Проверяем наличие входного параметра - пусть это будет имя файла<br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#DCDFE4;background-color:#282C34;">[ </span><span
+style="color:#98C379;background-color:#282C34;">-z </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$1</span><span style="color:#E06C75;background-color:#282C34;">" </span><span
+style="color:#DCDFE4;background-color:#282C34;">]; </span><span style="color:#E5C07B;background-color:#282C34;">then<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#61AFEF;background-color:#282C34;"># Входной параметр отсутствует, устанавливаем ему значение по умолчанию<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  script_name=</span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$default_file_name</span><span style="color:#E06C75;background-color:#282C34;">"<br></span><span
+style="color:#E5C07B;background-color:#282C34;">else<br></span><span style="color:#DCDFE4;background-color:#282C34;">  </span><span
+style="color:#61AFEF;background-color:#282C34;"># Входной параметр присутствует, используем его значение<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  script_name=</span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$1</span><span style="color:#E06C75;background-color:#282C34;">"<br></span><span
+style="color:#E5C07B;background-color:#282C34;">fi<br><br></span><span style="color:#61AFEF;background-color:#282C34;"># Проверяем, существует ли вообще awk и ps1 файл, нужного нам варианта. Если одного из них нет - выходим<br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#DCDFE4;background-color:#282C34;">[ ! </span><span
+style="color:#98C379;background-color:#282C34;">-e </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$script_name</span><span style="color:#E06C75;background-color:#282C34;">.awk" </span><span
+style="color:#DCDFE4;background-color:#282C34;">] ; </span><span style="color:#E5C07B;background-color:#282C34;">then<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#98C379;background-color:#282C34;">echo </span><span
+style="color:#E06C75;background-color:#282C34;">"file </span><span style="color:#C678DD;background-color:#282C34;">$script_name</span><span
+style="color:#E06C75;background-color:#282C34;">.awk not found.. exit"<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#98C379;background-color:#282C34;">exit </span><span
+style="color:#61AFEF;background-color:#282C34;">1<br></span><span style="color:#E5C07B;background-color:#282C34;">elif </span><span
+style="color:#DCDFE4;background-color:#282C34;">[ ! </span><span style="color:#98C379;background-color:#282C34;">-e </span><span
+style="color:#E06C75;background-color:#282C34;">"</span><span style="color:#C678DD;background-color:#282C34;">$script_name</span><span
+style="color:#E06C75;background-color:#282C34;">.ps1" </span><span style="color:#DCDFE4;background-color:#282C34;">]; </span><span
+style="color:#E5C07B;background-color:#282C34;">then<br></span><span style="color:#DCDFE4;background-color:#282C34;">  </span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"file </span><span
+style="color:#C678DD;background-color:#282C34;">$script_name</span><span style="color:#E06C75;background-color:#282C34;">.ps1 not found.. exit"<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#98C379;background-color:#282C34;">exit </span><span
+style="color:#61AFEF;background-color:#282C34;">1<br></span><span style="color:#E5C07B;background-color:#282C34;">fi<br><br></span><span
+style="color:#61AFEF;background-color:#282C34;"># Чтение данных из трубы, если они доступны<br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#DCDFE4;background-color:#282C34;">[ </span><span
+style="color:#98C379;background-color:#282C34;">-p </span><span style="color:#DCDFE4;background-color:#282C34;">/dev/stdin ]; </span><span
+style="color:#E5C07B;background-color:#282C34;">then<br></span><span style="color:#DCDFE4;background-color:#282C34;">    </span><span
+style="color:#98C379;background-color:#282C34;">read -a </span><span style="color:#DCDFE4;background-color:#282C34;">input_data<br></span><span
+style="color:#E5C07B;background-color:#282C34;">else<br></span><span style="color:#DCDFE4;background-color:#282C34;">    </span><span
+style="color:#61AFEF;background-color:#282C34;"># Если данных в трубе нет, то просим ввести, либо используем наши значения по умолчанию<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#98C379;background-color:#282C34;">echo </span><span
+style="color:#E06C75;background-color:#282C34;">"Write data separated by spaces, or press Enter for default values ( 0 1 2 5 true false test ) "<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#98C379;background-color:#282C34;">read -a </span><span
+style="color:#DCDFE4;background-color:#282C34;">input_data<br>    </span><span style="color:#61AFEF;background-color:#282C34;"># Использование данных или установка значений по умолчанию<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#E5C07B;background-color:#282C34;">if </span><span
+style="color:#DCDFE4;background-color:#282C34;">[ </span><span style="color:#98C379;background-color:#282C34;">${#input_data[@]} -eq </span><span
+style="color:#61AFEF;background-color:#282C34;">0 </span><span style="color:#DCDFE4;background-color:#282C34;">]; </span><span
+style="color:#E5C07B;background-color:#282C34;">then<br></span><span style="color:#DCDFE4;background-color:#282C34;">      input_data=(</span><span
+style="color:#E06C75;background-color:#282C34;">"</span><span style="color:#C678DD;background-color:#282C34;">${default_pipe_data[@]}</span><span
+style="color:#E06C75;background-color:#282C34;">"</span><span style="color:#DCDFE4;background-color:#282C34;">)<br>    </span><span
+style="color:#E5C07B;background-color:#282C34;">fi<br>fi<br><br></span><span style="color:#98C379;background-color:#282C34;">echo </span><span
+style="color:#E06C75;background-color:#282C34;">"Comparing the behaviour in AWK &amp; Poweshell script..."<br><br></span><span
+style="color:#61AFEF;background-color:#282C34;"># Запускаем awk для каждого входного значения по трубе<br></span><span
+style="color:#E5C07B;background-color:#282C34;">for </span><span style="color:#DCDFE4;background-color:#282C34;">input </span><span
+style="color:#E5C07B;background-color:#282C34;">in </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">${input_data[@]}</span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#DCDFE4;background-color:#282C34;">; </span><span style="color:#E5C07B;background-color:#282C34;">do<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#61AFEF;background-color:#282C34;"># Выводим пользователю какие данные читаем в трубе, в очередном цикле<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#98C379;background-color:#282C34;">echo </span><span
+style="color:#E06C75;background-color:#282C34;">"-----sending value </span><span
+style="color:#C678DD;background-color:#282C34;">\"</span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#98C379;background-color:#282C34;">$input</span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">\" </span><span style="color:#E06C75;background-color:#282C34;">through a pipe -----------------&gt;"<br><br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#61AFEF;background-color:#282C34;"># Используем AWK файл для обработки текущего элемента и вывода результата<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#98C379;background-color:#282C34;">echo -n -e </span><span
+style="color:#E06C75;background-color:#282C34;">"  :--&gt;</span><span style="color:#C678DD;background-color:#282C34;">\t</span><span
+style="color:#E06C75;background-color:#282C34;">" </span><span style="color:#DCDFE4;background-color:#282C34;">to a AWK </span><span
+style="color:#98C379;background-color:#282C34;">script</span><span style="color:#DCDFE4;background-color:#282C34;">: </span><span
+style="color:#E06C75;background-color:#282C34;">"</span><span style="color:#C678DD;background-color:#282C34;">\t\t</span><span
+style="color:#E06C75;background-color:#282C34;">-&gt; Result: " </span><span style="color:#DCDFE4;background-color:#282C34;">&amp;&amp; </span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$input</span><span style="color:#E06C75;background-color:#282C34;">" </span><span
+style="color:#DCDFE4;background-color:#282C34;">| </span><span style="color:#98C379;background-color:#282C34;">awk -f </span><span
+style="color:#E06C75;background-color:#282C34;">"</span><span style="color:#C678DD;background-color:#282C34;">$script_name</span><span
+style="color:#E06C75;background-color:#282C34;">.awk" </span><span style="color:#DCDFE4;background-color:#282C34;">|| </span><span
+style="color:#98C379;background-color:#282C34;">break<br><br></span><span style="color:#DCDFE4;background-color:#282C34;">    </span><span
+style="color:#61AFEF;background-color:#282C34;"># Используем PowerShell файл для обработки текущего элемента и вывода результата<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#98C379;background-color:#282C34;">echo -n -e </span><span
+style="color:#E06C75;background-color:#282C34;">"  :--&gt; </span><span style="color:#C678DD;background-color:#282C34;">\t</span><span
+style="color:#E06C75;background-color:#282C34;">" </span><span style="color:#DCDFE4;background-color:#282C34;">to a Powershell </span><span
+style="color:#98C379;background-color:#282C34;">script</span><span style="color:#DCDFE4;background-color:#282C34;">: </span><span
+style="color:#E06C75;background-color:#282C34;">"</span><span style="color:#C678DD;background-color:#282C34;">\t</span><span
+style="color:#E06C75;background-color:#282C34;">-&gt; Result: " </span><span style="color:#DCDFE4;background-color:#282C34;">&amp;&amp; </span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$input</span><span style="color:#E06C75;background-color:#282C34;">" </span><span
+style="color:#DCDFE4;background-color:#282C34;">| pwsh </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$script_name</span><span style="color:#E06C75;background-color:#282C34;">.ps1" </span><span
+style="color:#DCDFE4;background-color:#282C34;">|| </span><span style="color:#98C379;background-color:#282C34;">break<br><br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#61AFEF;background-color:#282C34;"># P.S: break нам особо тут уже не нужны, т.к они были тут вписаны тут еще до того как решил сделать проверку на нали<br>чие файла<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#61AFEF;background-color:#282C34;"># в начале скрипта, но пусть уже останется - чтоб наверняка)<br><br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#61AFEF;background-color:#282C34;"># Переходим на новую строку<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#98C379;background-color:#282C34;">echo -e<br></span><span
+style="color:#E5C07B;background-color:#282C34;">done<br><br><br></span><span style="color:#98C379;background-color:#282C34;">echo </span><span
+style="color:#E06C75;background-color:#282C34;">"-------------------- DONE ------------------------------"<br><br><br></span><span
+style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ./batch<br>-bash: ./batch: No such file or directory<br></span><span
+style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ./batch.sh<br>Write data separated by spaces, or press Enter for default values ( 0 1 2 5 true false test )<br><br>Comparing the behaviour in AWK &amp; Poweshell script...<br>-----sending value "0" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 0<br>  :--&gt;   to a Powershell script:        -&gt; Result: Ok 0<br><br>-----sending value "1" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 1<br>  :--&gt;   to a Powershell script:        -&gt; Result: Ok 1<br><br>-----sending value "2" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: NaB 2<br>  :--&gt;   to a Powershell script:        -&gt; Result: NaB 2<br><br>-----sending value "true" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 1<br>  :--&gt;   to a Powershell script:        -&gt; Result: Ok 1<br><br>-----sending value "false" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 0<br>  :--&gt;   to a Powershell script:        -&gt; Result: Ok 0<br><br>-----sending value "test" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: NaB test<br>  :--&gt;   to a Powershell script:        -&gt; Result: NaB test<br><br>-------------------- DONE ------------------------------<br></span><span
+style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo 5 8 | ./batch.sh v7<br>Comparing the behaviour in AWK &amp; Poweshell script...<br>-----sending value "5" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result:   :  1  2  3  4<br>... .. .. .. ..<br>1 : 01 02 03 04<br>2 : 02 04 06 08<br>3 : 03 06 09 12<br>4 : 04 08 12 16<br>  :--&gt;   to a Powershell script:        -&gt; Result:   : 1  2  3  4<br>... .. .. .. ..<br>1 : 01 02 03 04<br>2 : 02 04 06 08<br>3 : 03 06 09 12<br>4 : 04 08 12 16<br><br>-----sending value "8" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result:   :  1  2  3  4  5  6  7<br>... .. .. .. .. .. .. ..<br>1 : 01 02 03 04 05 06 07<br>2 : 02 04 06 08 10 12 14<br>3 : 03 06 09 12 15 18 21<br>4 : 04 08 12 16 20 24 28<br>5 : 05 10 15 20 25 30 35<br>6 : 06 12 18 24 30 36 42<br>7 : 07 14 21 28 35 42 49<br>  :--&gt;   to a Powershell script:        -&gt; Result:   : 1  2  3  4  5  6  7<br>... .. .. .. .. .. .. ..<br>1 : 01 02 03 04 05 06 07<br>2 : 02 04 06 08 10 12 14<br>3 : 03 06 09 12 15 18 21<br>4 : 04 08 12 16 20 24 28<br>5 : 05 10 15 20 25 30 35<br>6 : 06 12 18 24 30 36 42<br>7 : 07 14 21 28 35 42 49<br><br>-------------------- DONE ------------------------------<br></span><span
+style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo 5 8 | ./batch.sh v8<br>Comparing the behaviour in AWK &amp; Poweshell script...<br>-----sending value "5" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: 5<br><br>  :--&gt;   to a Powershell script:        -&gt; Result: 5<br><br><br>-----sending value "8" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: 8<br><br>  :--&gt;   to a Powershell script:        -&gt; Result: 8<br>^[OA^[OB<br><br>-------------------- DONE ------------------------------<br></span><span
+style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo 0 1 2 3 true false | ./batch.sh v10<br>Comparing the behaviour in AWK &amp; Poweshell script...<br>-----sending value "0" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 0<br>  :--&gt;   to a Powershell script:        -&gt; Result: OK, 0<br><br>-----sending value "1" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 1<br>  :--&gt;   to a Powershell script:        -&gt; Result: OK, 1<br><br>-----sending value "2" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 2<br>  :--&gt;   to a Powershell script:        -&gt; Result: OK, 2<br><br>-----sending value "3" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 3<br>  :--&gt;   to a Powershell script:        -&gt; Result: OK, 3<br><br>-----sending value "true" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: NaN true<br>  :--&gt;   to a Powershell script:        -&gt; Result: NaN, true<br><br>-----sending value "false" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: NaN false<br>  :--&gt;   to a Powershell script:        -&gt; Result: NaN, false<br><br>-------------------- DONE ------------------------------<br></span><span
+style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo 0 1 2 3 true false | ./batch.sh v9<br>Comparing the behaviour in AWK &amp; Poweshell script...<br>-----sending value "0" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 0<br>  :--&gt;   to a Powershell script:        -&gt; Result: Ok 0<br><br>-----sending value "1" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 1<br>  :--&gt;   to a Powershell script:        -&gt; Result: Ok 1<br><br>-----sending value "2" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: NaB 2<br>  :--&gt;   to a Powershell script:        -&gt; Result: NaB 2<br><br>-----sending value "3" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: NaB 3<br>  :--&gt;   to a Powershell script:        -&gt; Result: NaB 3<br><br>-----sending value "true" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 1<br>  :--&gt;   to a Powershell script:        -&gt; Result: Ok 1<br><br>-----sending value "false" through a pipe -----------------&gt;<br>  :--&gt;   to a AWK script:               -&gt; Result: Ok 0<br>  :--&gt;   to a Powershell script:        -&gt; Result: Ok 0<br><br>-------------------- DONE ------------------------------<br></span><span
+style="color:#98C379;background-color:#282C34;">r0man@LAPTOP-55DKKGOR</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$</span></div>
+    <p></p>
+  </body>
+</html>
