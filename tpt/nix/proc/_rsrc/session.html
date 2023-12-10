@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>session</title>
+  </head>
+  <body>
+    <div style="display:inline-block;white-space:pre;background-color:#282C34;font-family:'Cascadia Mono',monospace;font-size:12pt;padding:4px;"><span
+style="color:#DCDFE4;background-color:#282C34;">PowerShell 7.4.0<br></span><span
+style="color:#282C34;background-color:#FFFFFF;"></span><span style="color:#100E23;background-color:#FFFFFF;"> Roman@LAPTOP-55DKKGOR </span><span
+style="color:#FFFFFF;background-color:#91DDFF;"> </span><span style="color:#100E23;background-color:#91DDFF;">~ </span><span
+style="color:#91DDFF;background-color:#282C34;"><br></span><span style="color:#007ACC;background-color:#282C34;">❯ </span><span
+style="color:#E5C07B;background-color:#282C34;">ssh </span><span style="color:#DCDFE4;background-color:#282C34;">it@192.168.0.110<br>it@192.168.0.110's password:<br>Linux bookworm-unattended 6.1.0-14-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.64-1 (2023-11-30) x86_64<br><br>The programs included with the Debian GNU/Linux system are free software;<br>the exact distribution terms for each program are described in the<br>individual files in /usr/share/doc/*/copyright.<br><br>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br>permitted by applicable law.<br>Last login: Sun Dec 10 14:16:57 2023 from 192.168.0.104<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ nano capy<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ chmod +x capy<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ./capy<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo $x<br><br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ . ./capy<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo $x<br>CapyBARA<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ batcat capy<br></span><span style="color:#444444;background-color:#282C34;">───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">       </span><span style="color:#444444;background-color:#282C34;">│ </span><span
+style="color:#DCDFE4;background-color:#282C34;">File: capy<br></span><span style="color:#444444;background-color:#282C34;">───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br>   1   │ </span><span
+style="color:#767676;background-color:#282C34;">#!/bin/bash<br></span><span style="color:#444444;background-color:#282C34;">   2   │<br>   3   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">x</span><span style="color:#FF5F5F;background-color:#282C34;">=</span><span
+style="color:#FFFFFF;background-color:#282C34;">"</span><span style="color:#D7D787;background-color:#282C34;">CapyBARA</span><span
+style="color:#FFFFFF;background-color:#282C34;">"<br></span><span style="color:#444444;background-color:#282C34;">───────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ sudo mkdir /alpaca &amp;&amp; sudo mv capy /alpaca<br>[sudo] password for it:<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ nano .profile<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ cat .profile | highlight -O ansi -S bash<br></span><span
+style="color:#61AFEF;background-color:#282C34;"># ~/.profile: executed by the command interpreter for login shells.<br># This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login<br># exists.<br># see /usr/share/doc/bash/examples/startup-files for examples.<br># the files are located in the bash-doc package.<br><br># the default umask is set in /etc/profile; for setting the umask<br># for ssh logins, install and configure the libpam-umask package.<br>#umask 022<br><br># if running bash<br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#DCDFE4;background-color:#282C34;">[ </span><span
+style="color:#98C379;background-color:#282C34;">-n </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$BASH_VERSION</span><span style="color:#E06C75;background-color:#282C34;">" </span><span
+style="color:#DCDFE4;background-color:#282C34;">]; </span><span style="color:#E5C07B;background-color:#282C34;">then<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#61AFEF;background-color:#282C34;"># include .bashrc if it exists<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#E5C07B;background-color:#282C34;">if </span><span
+style="color:#DCDFE4;background-color:#282C34;">[ </span><span style="color:#98C379;background-color:#282C34;">-f </span><span
+style="color:#E06C75;background-color:#282C34;">"</span><span style="color:#C678DD;background-color:#282C34;">$HOME</span><span
+style="color:#E06C75;background-color:#282C34;">/.bashrc" </span><span style="color:#DCDFE4;background-color:#282C34;">]; </span><span
+style="color:#E5C07B;background-color:#282C34;">then<br></span><span style="color:#DCDFE4;background-color:#282C34;">        . </span><span
+style="color:#E06C75;background-color:#282C34;">"</span><span style="color:#C678DD;background-color:#282C34;">$HOME</span><span
+style="color:#E06C75;background-color:#282C34;">/.bashrc"<br></span><span style="color:#DCDFE4;background-color:#282C34;">    </span><span
+style="color:#E5C07B;background-color:#282C34;">fi<br>fi<br><br></span><span style="color:#61AFEF;background-color:#282C34;"># set PATH so it includes user's private bin if it exists<br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#DCDFE4;background-color:#282C34;">[ </span><span
+style="color:#98C379;background-color:#282C34;">-d </span><span style="color:#E06C75;background-color:#282C34;">"/alpaca" </span><span
+style="color:#DCDFE4;background-color:#282C34;">] ; </span><span style="color:#E5C07B;background-color:#282C34;">then<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    PATH=</span><span style="color:#E06C75;background-color:#282C34;">"/alpaca:</span><span
+style="color:#C678DD;background-color:#282C34;">$PATH</span><span style="color:#E06C75;background-color:#282C34;">"<br></span><span
+style="color:#E5C07B;background-color:#282C34;">fi<br><br><br></span><span style="color:#61AFEF;background-color:#282C34;"># set PATH so it includes user's private bin if it exists<br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#DCDFE4;background-color:#282C34;">[ </span><span
+style="color:#98C379;background-color:#282C34;">-d </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$HOME</span><span style="color:#E06C75;background-color:#282C34;">/bin" </span><span
+style="color:#DCDFE4;background-color:#282C34;">] ; </span><span style="color:#E5C07B;background-color:#282C34;">then<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    PATH=</span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$HOME</span><span style="color:#E06C75;background-color:#282C34;">/bin:</span><span
+style="color:#C678DD;background-color:#282C34;">$PATH</span><span style="color:#E06C75;background-color:#282C34;">"<br></span><span
+style="color:#E5C07B;background-color:#282C34;">fi<br><br></span><span style="color:#61AFEF;background-color:#282C34;"># set PATH so it includes user's private bin if it exists<br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#DCDFE4;background-color:#282C34;">[ </span><span
+style="color:#98C379;background-color:#282C34;">-d </span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$HOME</span><span style="color:#E06C75;background-color:#282C34;">/.local/bin" </span><span
+style="color:#DCDFE4;background-color:#282C34;">] ; </span><span style="color:#E5C07B;background-color:#282C34;">then<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    PATH=</span><span style="color:#E06C75;background-color:#282C34;">"</span><span
+style="color:#C678DD;background-color:#282C34;">$HOME</span><span style="color:#E06C75;background-color:#282C34;">/.local/bin:</span><span
+style="color:#C678DD;background-color:#282C34;">$PATH</span><span style="color:#E06C75;background-color:#282C34;">"<br></span><span
+style="color:#E5C07B;background-color:#282C34;">fi<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo $PATH<br>/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ exit<br>logout<br>Connection to 192.168.0.110 closed.<br></span><span
+style="color:#282C34;background-color:#FFFFFF;"></span><span style="color:#100E23;background-color:#FFFFFF;"> Roman@LAPTOP-55DKKGOR </span><span
+style="color:#FFFFFF;background-color:#91DDFF;"> </span><span style="color:#100E23;background-color:#91DDFF;">~ </span><span
+style="color:#91DDFF;background-color:#282C34;"><br></span><span style="color:#007ACC;background-color:#282C34;">❯ </span><span
+style="color:#E5C07B;background-color:#282C34;">ssh </span><span style="color:#DCDFE4;background-color:#282C34;">it@192.168.0.110<br>it@192.168.0.110's password:<br>Linux bookworm-unattended 6.1.0-14-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.64-1 (2023-11-30) x86_64<br><br>The programs included with the Debian GNU/Linux system are free software;<br>the exact distribution terms for each program are described in the<br>individual files in /usr/share/doc/*/copyright.<br><br>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br>permitted by applicable law.<br>Last login: Sun Dec 10 14:48:48 2023 from 192.168.0.104<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo $PATH<br>/alpaca:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ . capy<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo $x<br>CapyBARA<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ nano dk<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ chmod +x dk<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ batcat dk<br></span><span style="color:#444444;background-color:#282C34;">───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">       </span><span style="color:#444444;background-color:#282C34;">│ </span><span
+style="color:#DCDFE4;background-color:#282C34;">File: dk<br></span><span style="color:#444444;background-color:#282C34;">───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br>   1   │ </span><span
+style="color:#767676;background-color:#282C34;">#!/bin/bash<br></span><span style="color:#444444;background-color:#282C34;">   2   │ </span><span
+style="color:#FF5F5F;background-color:#282C34;">while </span><span style="color:#FFFFFF;background-color:#282C34;">test 0<br></span><span
+style="color:#444444;background-color:#282C34;">   3   │ </span><span style="color:#FF5F5F;background-color:#282C34;">do<br></span><span
+style="color:#444444;background-color:#282C34;">   4   │ </span><span style="color:#FFFFFF;background-color:#282C34;">sleep 3<br></span><span
+style="color:#444444;background-color:#282C34;">   5   │ </span><span style="color:#5FD7FF;background-color:#282C34;">echo </span><span
+style="color:#FFFFFF;background-color:#282C34;">day kolbasy!<br></span><span style="color:#444444;background-color:#282C34;">   6   │ </span><span
+style="color:#FF5F5F;background-color:#282C34;">done<br></span><span style="color:#444444;background-color:#282C34;">───────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ./dk &amp;<br>[1] 624<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ps -a<br>    PID TTY          TIME CMD<br>    624 pts/0    00:00:00 dk<br>    625 pts/0    00:00:00 sleep<br>    626 pts/0    00:00:00 ps<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ day kolbasy!<br>kill -9 624<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ apt-file search gcc | grep -P '/bin/gcc$'<br>gcc: /usr/bin/gcc<br>icecc: /usr/lib/icecc/bin/gcc<br>pentium-builder: /usr/bin/gcc<br>[1]+  Killed                  ./dk<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ sudo apt install gcc -y<br>[sudo] password for it:<br>#---------------------------------------------------------------------------------------------|<br></span><span
+style="color:#DCDFE4;background-color:#282C34;"><span style="color:#DCDFE4;background-color:#282C34;"><span
+style="color:#DCDFE4;background-color:#282C34;">#              .......................cutting out the installation log.....................</span></span><br>#---------------------------------------------------------------------------------------------|<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ mkdir hanoi<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ cd hanoi<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~/hanoi</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ nano hanoi.c<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~/hanoi</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ gcc hanoi.c -o hanoi -lm -lncurses<br>hanoi.c:54:10: </span><span
+style="color:#E06C75;background-color:#282C34;">fatal error: </span><span style="color:#DCDFE4;background-color:#282C34;">ncurses.h: No such file or directory<br>   54 | #include </span><span
+style="color:#E06C75;background-color:#282C34;">&lt;ncurses.h&gt;<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">      |          </span><span style="color:#E06C75;background-color:#282C34;">^~~~~~~~~~~<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">compilation terminated.<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~/hanoi</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ apt-file search ncurses | grep -P '/bin'<br>libncurses-dev: /usr/bin/ncurses5-config<br>libncurses-dev: /usr/bin/ncurses6-config<br>libncurses-dev: /usr/bin/ncursesw5-config<br>libncurses-dev: /usr/bin/ncursesw6-config<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~/hanoi</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ sudo apt install libncurses-dev -y<br>Reading package lists... Done<br></span><span
+style="color:#DCDFE4;background-color:#282C34;"><span style="color:#DCDFE4;background-color:#282C34;">#---------------------------------------------------------------------------------------------|<br>#              .......................cutting out the installation log.....................<br>#---------------------------------------------------------------------------------------------|</span><br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~/hanoi</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ gcc hanoi.c -o hanoi -lm -lncurses<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~/hanoi</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ls -l<br>total 36<br>-rwxr-xr-x 1 it it 22672 Dec 10 14:55 </span><span
+style="color:#98C379;background-color:#282C34;">hanoi<br></span><span style="color:#DCDFE4;background-color:#282C34;">-rw-r--r-- 1 it it  9547 Dec 10 14:54 hanoi.c<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~/hanoi</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ./hanoi<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~/hanoi</span><span
+style="color:#DCDFE4;background-color:#282C34;">$</span></div>
+    <p></p>
+  </body>
+</html>
