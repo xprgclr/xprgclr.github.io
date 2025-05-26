@@ -1,0 +1,14 @@
+r0man@LAPTOP-55DKKGOR:~$ history
+  436  clear
+  437  ls
+  438  cat ./batch.sh | highlight -O ansi -S bash
+  439  ./batch
+  440  ./batch.sh
+  441  echo 5 8 | ./batch.sh v7
+  442  echo 5 8 | ./batch.sh v8
+  443  echo 0 1 2 3 true false | ./batch.sh v10
+  444  echo 0 1 2 3 true false | ./batch.sh v9
+  445  history
+  446  clear
+  447  history
+r0man@LAPTOP-55DKKGOR:~$

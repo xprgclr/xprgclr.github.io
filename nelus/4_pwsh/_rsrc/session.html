@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>session</title>
+  </head>
+  <body>
+    <div style="display: inline-block; white-space: pre; background-color: #282c34; font-family: &quot;Cascadia Mono&quot;,monospace; font-size: 12pt; padding: 4px; width: 1199px;"><span
+style="color:#DCDFE4;background-color:#282C34;">PowerShell 7.4.0<br>PS C:\Users\Roman&gt; </span><span
+style="color:#E5C07B;background-color:#282C34;">ssh </span><span style="color:#DCDFE4;background-color:#282C34;">it@192.168.0.110<br>it@192.168.0.110's password:<br>Linux bookworm-unattended 6.1.0-13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.55-1 (2023-09-29) x86_64<br><br>The programs included with the Debian GNU/Linux system are free software;<br>the exact distribution terms for each program are described in the<br>individual files in /usr/share/doc/*/copyright.<br><br>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br>permitted by applicable law.<br>Last login: Thu Nov 23 21:24:45 2023<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo -e "\nfree:" &amp;&amp; free &amp;&amp; echo -e "\nip a:" &amp;&amp; ip a &amp;&amp; echo -e "\ndf:" &amp;&amp; df<br><br>free:<br>               total        used        free      shared  buff/cache   available<br>Mem:         2013680      225592     1823140         552       80900     1788088<br>Swap:         998396           0      998396<br><br>ip a:<br>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000<br>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00<br>    inet 127.0.0.1/8 scope host lo<br>       valid_lft forever preferred_lft forever<br>    inet6 ::1/128 scope host noprefixroute<br>       valid_lft forever preferred_lft forever<br>2: enp0s3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000<br>    link/ether 08:00:27:85:30:e3 brd ff:ff:ff:ff:ff:ff<br>    inet 192.168.0.110/24 brd 192.168.0.255 scope global dynamic enp0s3<br>       valid_lft 7148sec preferred_lft 7148sec<br>    inet6 fe80::a00:27ff:fe85:30e3/64 scope link<br>       valid_lft forever preferred_lft forever<br><br>df:<br>Filesystem     1K-blocks    Used Available Use% Mounted on<br>udev              987772       0    987772   0% /dev<br>tmpfs             201368     552    200816   1% /run<br>/dev/sda1        3067812 1112276   1779512  39% /<br>tmpfs            1006840       0   1006840   0% /dev/shm<br>tmpfs               5120       0      5120   0% /run/lock<br>tmpfs             201368       0    201368   0% /run/user/1000<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt install bat -y<br>[sudo] password for it:<br>Hit:1 http://ftp.ee.debian.org/debian bookworm InRelease<br>Get:2 http://ftp.ee.debian.org/debian bookworm-updates InRelease [52.1 kB]</span></div>
+    <div style="display: inline-block; white-space: pre; background-color: #282c34; font-family: &quot;Cascadia Mono&quot;,monospace; font-size: 12pt; padding: 4px; width: 1199px;"><span
+style="color:#DCDFE4;background-color:#282C34;"></span><span style="color:#DCDFE4;background-color:#282C34;"><span
+style="font-family: &quot;Cascadia Mono&quot;, monospace; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: pre; background-color: rgb(40, 44, 52); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(220, 223, 228);">#---------------------------------------------------------------------------------------------|<br></span><span
+style="font-family: &quot;Cascadia Mono&quot;, monospace; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: pre; background-color: rgb(40, 44, 52); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(220, 223, 228);"><span
+style="color: rgb(220, 223, 228); background-color: rgb(40, 44, 52);"><span style="color: rgb(220, 223, 228); background-color: rgb(40, 44, 52);">#              .......................cutting out the installation log.....................</span></span><br>#---------------------------------------------------------------------------------------------|</span></span></div>
+    <div style="display: inline-block; white-space: pre; background-color: #282c34; font-family: &quot;Cascadia Mono&quot;,monospace; font-size: 12pt; padding: 4px; width: 1199px;"><span
+style="color:#DCDFE4;background-color:#282C34;"></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ touch pwsh-install.sh &amp;&amp; nano pwsh-install.sh<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ chmod +x pwsh-install.sh &amp;&amp; ./pwsh-install.sh<br>ur not root bro<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ chmod +x pwsh-install.sh &amp;&amp; sudo ./pwsh-install.sh<br></span><span
+style="color:#444444;background-color:#282C34;">───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">       </span><span style="color:#444444;background-color:#282C34;">│ </span><span
+style="color:#DCDFE4;background-color:#282C34;">File: ./pwsh-install.sh<br></span><span
+style="color:#444444;background-color:#282C34;">───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br>   1   │ </span><span
+style="color:#767676;background-color:#282C34;">#! /bin/bash<br></span><span style="color:#444444;background-color:#282C34;">   2   │<br>   3   │ </span><span
+style="color:#FF5F5F;background-color:#282C34;">if </span><span style="color:#FFFFFF;background-color:#282C34;">test `id </span><span
+style="color:#FF8700;background-color:#282C34;">-u</span><span style="color:#FFFFFF;background-color:#282C34;">` </span><span
+style="color:#FF8700;background-color:#282C34;">-ne </span><span style="color:#FFFFFF;background-color:#282C34;">0<br></span><span
+style="color:#444444;background-color:#282C34;">   4   │ </span><span style="color:#FF5F5F;background-color:#282C34;">then<br></span><span
+style="color:#444444;background-color:#282C34;">   5   │   </span><span style="color:#5FD7FF;background-color:#282C34;">echo </span><span
+style="color:#FFFFFF;background-color:#282C34;">"</span><span style="color:#D7D787;background-color:#282C34;">ur not root bro</span><span
+style="color:#FFFFFF;background-color:#282C34;">"<br></span><span style="color:#444444;background-color:#282C34;">   6   │   </span><span
+style="color:#5FD7FF;background-color:#282C34;">exit </span><span style="color:#FFFFFF;background-color:#282C34;">1<br></span><span
+style="color:#444444;background-color:#282C34;">   7   │ </span><span style="color:#FF5F5F;background-color:#282C34;">fi<br></span><span
+style="color:#444444;background-color:#282C34;">   8   │<br>   9   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">batcat $0<br></span><span style="color:#444444;background-color:#282C34;">  10   │<br>  11   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">apt-get update<br></span><span style="color:#444444;background-color:#282C34;">  12   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">apt-get install </span><span style="color:#FF8700;background-color:#282C34;">-y </span><span
+style="color:#FFFFFF;background-color:#282C34;">wget<br></span><span style="color:#444444;background-color:#282C34;">  13   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.0//powershell_7.4.0-1.deb_amd64.deb<br></span><span
+style="color:#444444;background-color:#282C34;">  14   │ </span><span style="color:#FFFFFF;background-color:#282C34;">dpkg </span><span
+style="color:#FF8700;background-color:#282C34;">-i </span><span style="color:#FFFFFF;background-color:#282C34;">powershell_7.4.0-1.deb_amd64.deb<br></span><span
+style="color:#444444;background-color:#282C34;">  15   │ </span><span style="color:#FFFFFF;background-color:#282C34;">apt-get install </span><span
+style="color:#FF8700;background-color:#282C34;">-f<br></span><span style="color:#444444;background-color:#282C34;">  16   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">rm powershell_7.4.0-1.deb_amd64.deb<br></span><span
+style="color:#444444;background-color:#282C34;">───────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">Hit:1 http://ftp.ee.debian.org/debian bookworm InRelease<br>Hit:2 http://ftp.ee.debian.org/debian bookworm-updates InRelease<br>Hit:3 http://security.debian.org/debian-security bookworm-security InRelease<br>Reading package lists... Done<br></span><br><span
+style="color:#DCDFE4;background-color:#282C34;"><span style="font-family: &quot;Cascadia Mono&quot;, monospace; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: pre; background-color: rgb(40, 44, 52); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(220, 223, 228);">#---------------------------------------------------------------------------------------------|<br></span><span
+style="font-family: &quot;Cascadia Mono&quot;, monospace; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: pre; background-color: rgb(40, 44, 52); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(220, 223, 228);"><span
+style="color: rgb(220, 223, 228); background-color: rgb(40, 44, 52);"><span style="color: rgb(220, 223, 228); background-color: rgb(40, 44, 52);">#              .......................cutting out the installation log.....................</span></span><br>#---------------------------------------------------------------------------------------------|</span></span></div>
+    <div style="display: inline-block; white-space: pre; background-color: #282c34; font-family: &quot;Cascadia Mono&quot;,monospace; font-size: 12pt; padding: 4px; width: 1199px;"><span
+style="color:#DCDFE4;background-color:#282C34;"></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ touch v9.awk &amp;&amp; nano v9.awk<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ touch v9.ps1 &amp;&amp; nano v9.ps1<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ls<br></span><span style="color:#98C379;background-color:#282C34;">pwsh-install.sh</span><span
+style="color:#DCDFE4;background-color:#282C34;">  v9.awk  v9.ps1<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ batcat pwsh-install.sh<br></span><span
+style="color:#444444;background-color:#282C34;">───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">       </span><span style="color:#444444;background-color:#282C34;">│ </span><span
+style="color:#DCDFE4;background-color:#282C34;">File: pwsh-install.sh<br></span><span
+style="color:#444444;background-color:#282C34;">───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br>   1   │ </span><span
+style="color:#767676;background-color:#282C34;">#! /bin/bash<br></span><span style="color:#444444;background-color:#282C34;">   2   │<br>   3   │ </span><span
+style="color:#FF5F5F;background-color:#282C34;">if </span><span style="color:#FFFFFF;background-color:#282C34;">test `id </span><span
+style="color:#FF8700;background-color:#282C34;">-u</span><span style="color:#FFFFFF;background-color:#282C34;">` </span><span
+style="color:#FF8700;background-color:#282C34;">-ne </span><span style="color:#FFFFFF;background-color:#282C34;">0<br></span><span
+style="color:#444444;background-color:#282C34;">   4   │ </span><span style="color:#FF5F5F;background-color:#282C34;">then<br></span><span
+style="color:#444444;background-color:#282C34;">   5   │   </span><span style="color:#5FD7FF;background-color:#282C34;">echo </span><span
+style="color:#FFFFFF;background-color:#282C34;">"</span><span style="color:#D7D787;background-color:#282C34;">ur not root bro</span><span
+style="color:#FFFFFF;background-color:#282C34;">"<br></span><span style="color:#444444;background-color:#282C34;">   6   │   </span><span
+style="color:#5FD7FF;background-color:#282C34;">exit </span><span style="color:#FFFFFF;background-color:#282C34;">1<br></span><span
+style="color:#444444;background-color:#282C34;">   7   │ </span><span style="color:#FF5F5F;background-color:#282C34;">fi<br></span><span
+style="color:#444444;background-color:#282C34;">   8   │<br>   9   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">batcat $0<br></span><span style="color:#444444;background-color:#282C34;">  10   │<br>  11   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">apt-get update<br></span><span style="color:#444444;background-color:#282C34;">  12   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">apt-get install </span><span style="color:#FF8700;background-color:#282C34;">-y </span><span
+style="color:#FFFFFF;background-color:#282C34;">wget<br></span><span style="color:#444444;background-color:#282C34;">  13   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.0//powershell_7.4.0-1.deb_amd64.deb<br></span><span
+style="color:#444444;background-color:#282C34;">  14   │ </span><span style="color:#FFFFFF;background-color:#282C34;">dpkg </span><span
+style="color:#FF8700;background-color:#282C34;">-i </span><span style="color:#FFFFFF;background-color:#282C34;">powershell_7.4.0-1.deb_amd64.deb<br></span><span
+style="color:#444444;background-color:#282C34;">  15   │ </span><span style="color:#FFFFFF;background-color:#282C34;">apt-get install </span><span
+style="color:#FF8700;background-color:#282C34;">-f<br></span><span style="color:#444444;background-color:#282C34;">  16   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">rm powershell_7.4.0-1.deb_amd64.deb<br></span><span
+style="color:#444444;background-color:#282C34;">───────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ batcat v9.awk<br></span><span
+style="color:#444444;background-color:#282C34;">───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">       </span><span style="color:#444444;background-color:#282C34;">│ </span><span
+style="color:#DCDFE4;background-color:#282C34;">File: v9.awk<br></span><span style="color:#444444;background-color:#282C34;">───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br>   1   │ </span><span
+style="color:#6C6C6C;background-color:#282C34;"># echo false | awk -f 9.awk<br></span><span
+style="color:#444444;background-color:#282C34;">   2   │<br>   3   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">{<br></span><span style="color:#444444;background-color:#282C34;">   4   │   </span><span
+style="color:#FFFFFF;background-color:#282C34;">x</span><span style="color:#FF5F5F;background-color:#282C34;">=</span><span
+style="color:#FFFFFF;background-color:#282C34;">$0;<br></span><span style="color:#444444;background-color:#282C34;">   5   │   </span><span
+style="color:#FFFFFF;background-color:#282C34;">x</span><span style="color:#FF5F5F;background-color:#282C34;">=</span><span
+style="color:#FFFFFF;background-color:#282C34;">x</span><span style="color:#FF5F5F;background-color:#282C34;">==</span><span
+style="color:#D7D787;background-color:#282C34;">"true"</span><span style="color:#FFFFFF;background-color:#282C34;">?</span><span
+style="color:#AF87FF;background-color:#282C34;">1</span><span style="color:#FF5F5F;background-color:#282C34;">:</span><span
+style="color:#FFFFFF;background-color:#282C34;">x; x</span><span style="color:#FF5F5F;background-color:#282C34;">=</span><span
+style="color:#FFFFFF;background-color:#282C34;">x</span><span style="color:#FF5F5F;background-color:#282C34;">==</span><span
+style="color:#D7D787;background-color:#282C34;">"false"</span><span style="color:#FFFFFF;background-color:#282C34;">?</span><span
+style="color:#AF87FF;background-color:#282C34;">0</span><span style="color:#FF5F5F;background-color:#282C34;">:</span><span
+style="color:#FFFFFF;background-color:#282C34;">x;<br></span><span style="color:#444444;background-color:#282C34;">   6   │   </span><span
+style="color:#FF5F5F;background-color:#282C34;">print </span><span style="color:#FFFFFF;background-color:#282C34;">x</span><span
+style="color:#FF5F5F;background-color:#282C34;">~</span><span style="color:#FFAF00;background-color:#282C34;">/</span><span
+style="color:#FF5F5F;background-color:#282C34;">^(</span><span style="color:#FFAF00;background-color:#282C34;">0</span><span
+style="color:#FF5F5F;background-color:#282C34;">|</span><span style="color:#FFAF00;background-color:#282C34;">1</span><span
+style="color:#FF5F5F;background-color:#282C34;">)$</span><span style="color:#FFAF00;background-color:#282C34;">/</span><span
+style="color:#FF5F5F;background-color:#282C34;">?</span><span style="color:#D7D787;background-color:#282C34;">"Ok"</span><span
+style="color:#FFFFFF;background-color:#282C34;">:</span><span style="color:#D7D787;background-color:#282C34;">"NaB"</span><span
+style="color:#FFFFFF;background-color:#282C34;">,x<br></span><span style="color:#444444;background-color:#282C34;">   7   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">}<br></span><span style="color:#444444;background-color:#282C34;">───────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ batcat v9.ps1<br></span><span
+style="color:#444444;background-color:#282C34;">───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">       </span><span style="color:#444444;background-color:#282C34;">│ </span><span
+style="color:#DCDFE4;background-color:#282C34;">File: v9.ps1<br></span><span style="color:#444444;background-color:#282C34;">───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br>   1   │ </span><span
+style="color:#6C6C6C;background-color:#282C34;"># ForEach по элементам трубы<br></span><span
+style="color:#444444;background-color:#282C34;">   2   │ </span><span style="color:#FFFFFF;background-color:#282C34;">$input </span><span
+style="color:#FF5F5F;background-color:#282C34;">| % </span><span style="color:#FFFFFF;background-color:#282C34;">{$n</span><span
+style="color:#FF5F5F;background-color:#282C34;">=</span><span style="color:#FFFFFF;background-color:#282C34;">$_}<br></span><span
+style="color:#444444;background-color:#282C34;">   3   │ </span><span style="color:#6C6C6C;background-color:#282C34;"># Преобразование строки в булевское значение<br></span><span
+style="color:#444444;background-color:#282C34;">   4   │ </span><span style="color:#FFFFFF;background-color:#282C34;">$n </span><span
+style="color:#FF5F5F;background-color:#282C34;">= </span><span style="color:#FFFFFF;background-color:#282C34;">$n </span><span
+style="color:#FF5F5F;background-color:#282C34;">-replace </span><span style="color:#D7D787;background-color:#282C34;">"true"</span><span
+style="color:#FF5F5F;background-color:#282C34;">, </span><span style="color:#AF87FF;background-color:#282C34;">1 </span><span
+style="color:#FF5F5F;background-color:#282C34;">-replace </span><span style="color:#D7D787;background-color:#282C34;">"false"</span><span
+style="color:#FF5F5F;background-color:#282C34;">, </span><span style="color:#AF87FF;background-color:#282C34;">0<br></span><span
+style="color:#444444;background-color:#282C34;">   5   │ </span><span style="color:#6C6C6C;background-color:#282C34;"># Регулярка<br></span><span
+style="color:#444444;background-color:#282C34;">   6   │ </span><span style="color:#FFFFFF;background-color:#282C34;">($n </span><span
+style="color:#FF5F5F;background-color:#282C34;">-match </span><span style="color:#D7D787;background-color:#282C34;">"^[01]$"</span><span
+style="color:#FFFFFF;background-color:#282C34;">) </span><span style="color:#FF5F5F;background-color:#282C34;">?<br></span><span
+style="color:#444444;background-color:#282C34;">   7   │ </span><span style="color:#D7D787;background-color:#282C34;">"Ok </span><span
+style="color:#FFFFFF;background-color:#282C34;">$n</span><span style="color:#D7D787;background-color:#282C34;">" </span><span
+style="color:#FFFFFF;background-color:#282C34;">: </span><span style="color:#D7D787;background-color:#282C34;">"NaB </span><span
+style="color:#FFFFFF;background-color:#282C34;">$n</span><span style="color:#D7D787;background-color:#282C34;">"<br></span><span
+style="color:#444444;background-color:#282C34;">   8   │<br>───────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo -e "\nfree:" &amp;&amp; free &amp;&amp; echo -e "\nip a:" &amp;&amp; ip a &amp;&amp; echo -e "\ndf:" &amp;&amp; df<br><br>free:<br>               total        used        free      shared  buff/cache   available<br>Mem:         2013680      239356     1435484         556      485864     1774324<br>Swap:         998396           0      998396<br><br>ip a:<br>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000<br>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00<br>    inet 127.0.0.1/8 scope host lo<br>       valid_lft forever preferred_lft forever<br>    inet6 ::1/128 scope host noprefixroute<br>       valid_lft forever preferred_lft forever<br>2: enp0s3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000<br>    link/ether 08:00:27:85:30:e3 brd ff:ff:ff:ff:ff:ff<br>    inet 192.168.0.110/24 brd 192.168.0.255 scope global dynamic enp0s3<br>       valid_lft 6895sec preferred_lft 6895sec<br>    inet6 fe80::a00:27ff:fe85:30e3/64 scope link<br>       valid_lft forever preferred_lft forever<br><br>df:<br>Filesystem     1K-blocks    Used Available Use% Mounted on<br>udev              987772       0    987772   0% /dev<br>tmpfs             201368     556    200812   1% /run<br>/dev/sda1        3067812 1309416   1582372  46% /<br>tmpfs            1006840       0   1006840   0% /dev/shm<br>tmpfs               5120       0      5120   0% /run/lock<br>tmpfs             201368       0    201368   0% /run/user/1000<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo 0 | awk -f v9.awk<br>Ok 0<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo 1 | awk -f v9.awk<br>Ok 1<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo 2 | awk -f v9.awk<br>NaB 2<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo 3 | awk -f v9.awk<br>NaB 3<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo false | awk -f v9.awk<br>Ok 0<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo true | awk -f v9.awk<br>Ok 1<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo test | awk -f v9.awk<br>NaB test<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ pwsh<br>PowerShell 7.4.0<br>PS /home/it&gt; </span><span
+style="color:#E5C07B;background-color:#282C34;">echo </span><span style="color:#DCDFE4;background-color:#282C34;">0 | </span><span
+style="color:#E5C07B;background-color:#282C34;">./v9.ps1<br></span><span style="color:#DCDFE4;background-color:#282C34;">Ok 0<br>PS /home/it&gt; </span><span
+style="color:#E5C07B;background-color:#282C34;">echo </span><span style="color:#DCDFE4;background-color:#282C34;">1 | </span><span
+style="color:#E5C07B;background-color:#282C34;">./v9.ps1<br></span><span style="color:#DCDFE4;background-color:#282C34;">Ok 1<br>PS /home/it&gt; </span><span
+style="color:#E5C07B;background-color:#282C34;">echo </span><span style="color:#DCDFE4;background-color:#282C34;">2 | </span><span
+style="color:#E5C07B;background-color:#282C34;">./v9.ps1<br></span><span style="color:#DCDFE4;background-color:#282C34;">NaB 2<br>PS /home/it&gt; </span><span
+style="color:#E5C07B;background-color:#282C34;">echo </span><span style="color:#DCDFE4;background-color:#282C34;">false | </span><span
+style="color:#E5C07B;background-color:#282C34;">./v9.ps1<br></span><span style="color:#DCDFE4;background-color:#282C34;">Ok 0<br>PS /home/it&gt; </span><span
+style="color:#E5C07B;background-color:#282C34;">echo </span><span style="color:#DCDFE4;background-color:#282C34;">true | </span><span
+style="color:#E5C07B;background-color:#282C34;">./v9.ps1<br></span><span style="color:#DCDFE4;background-color:#282C34;">Ok 1<br>PS /home/it&gt; </span><span
+style="color:#E5C07B;background-color:#282C34;">echo </span><span style="color:#DCDFE4;background-color:#282C34;">test | </span><span
+style="color:#E5C07B;background-color:#282C34;">./v9.ps1<br></span><span style="color:#DCDFE4;background-color:#282C34;">NaB test<br>PS /home/it&gt; </span><span
+style="color:#98C379;background-color:#282C34;">exit<br>it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ echo "_______Done______"<br>_______Done______<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$</span></div>
+    <p></p>
+  </body>
+</html>

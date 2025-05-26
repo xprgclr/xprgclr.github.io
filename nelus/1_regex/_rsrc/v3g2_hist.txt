@@ -1,0 +1,17 @@
+it@bookworm-unattended:~$ history
+    5  touch kit.txt && nano kit.txt
+    6  touch stage.awk && nano stage.awk
+    7  cat kit.txt | grep -P Ruum             | sort             | uniq -c             | nl
+  | awk '{print $1, $3, $4, $2}'
+    8  cat kit.txt | awk -f stage.awk > formatted_kit.txt
+    9  cat formatted_kit.txt
+   10  sudo apt install gawk
+   11  cat kit.txt | awk -f stage.awk > formatted_kit.txt
+   12  cat formatted_kit.txt
+   13  touch v3g2.sh && nano v3g2.sh
+   14  ls -l
+   15  bash v3g2.sh
+   16  cat v3g2.sh
+   17  sudo apt update && sudo apt install bat -y
+   18  batcat v3g2.sh
+   19  history

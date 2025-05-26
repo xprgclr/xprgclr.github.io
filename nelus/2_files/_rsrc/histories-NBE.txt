@@ -1,0 +1,35 @@
+history of it
+
+  892  lsblk
+  893  sudo fdisk /dev/sdb
+  894  lsblk
+  895  sudo mkfs.ext4 /dev/sdb1
+  896  ls /
+  898  sudo mkdir -p /mnt/sdb1
+  899  sudo -i
+  
+history of root from it
+
+   38  mount /dev/sdb1 /mnt/sdb1
+   39  ls -l /mnt/sdb1
+   40  echo '31 | Kirill Nelus            | drwS-wS-wT 1 Potato Robots 639  November 14 2023 Tau'
+   42  adduser potato
+   43  cat /etc/passwd
+   44  addgroup robots
+   45  nano /etc/passwd
+   61  cat /etc/passwd | tail -n 1
+   46  nano /etc/group
+   62  cat /etc/group | tail -n 1
+
+history of Potato
+
+    1  whoami
+    2  mkdir -p Tau
+    3  ls -l
+    7  su
+
+history of root from Potato
+
+   59  chmod 7622 Tau
+   60  ls -l
+

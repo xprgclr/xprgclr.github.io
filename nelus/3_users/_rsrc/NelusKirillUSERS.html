@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>NelusKirillUSERS</title>
+  </head>
+  <body>
+    <div style="display:inline-block;white-space:pre;background-color:#0C0C0C;font-family:'Cascadia Mono',monospace;font-size:16pt;padding:4px;"><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ nano band<br></span><span style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ cat band<br>woody<br>buzz<br>jessie<br>bullseye<br>potato<br>rex<br>slinky<br>hamm<br>dolly<br>bopeep<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ nano up-band<br></span><span style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ cat up-band | highlight -O ansi -S bash<br></span><span
+style="color:#0037DA;background-color:#0C0C0C;">#!/bin/bash<br><br></span><span
+style="color:#C19C00;background-color:#0C0C0C;">if </span><span style="color:#13A10E;background-color:#0C0C0C;">test </span><span
+style="color:#C50F1F;background-color:#0C0C0C;">`id -u` </span><span style="color:#13A10E;background-color:#0C0C0C;">-ne </span><span
+style="color:#0037DA;background-color:#0C0C0C;">0<br></span><span style="color:#C19C00;background-color:#0C0C0C;">then<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#13A10E;background-color:#0C0C0C;">echo </span><span
+style="color:#C50F1F;background-color:#0C0C0C;">"ur not root bro"<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#13A10E;background-color:#0C0C0C;">exit </span><span
+style="color:#0037DA;background-color:#0C0C0C;">1<br></span><span style="color:#C19C00;background-color:#0C0C0C;">fi<br><br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">addgroup team<br></span><span style="color:#C19C00;background-color:#0C0C0C;">for </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">i </span><span style="color:#C19C00;background-color:#0C0C0C;">in </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$(</span><span style="color:#13A10E;background-color:#0C0C0C;">cat </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">band)<br></span><span style="color:#C19C00;background-color:#0C0C0C;">do<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">    adduser </span><span style="color:#13A10E;background-color:#0C0C0C;">--ingroup </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">team </span><span style="color:#13A10E;background-color:#0C0C0C;">$i </span><span
+style="color:#C50F1F;background-color:#0C0C0C;">&lt;&lt; BASTA 2&gt;&amp;1 | cat &gt; /dev/null<br></span><span
+style="color:#881798;background-color:#0C0C0C;">$i<br>$i<br>$i<br><br><br><br><br></span><span
+style="color:#C50F1F;background-color:#0C0C0C;">y<br>BASTA<br></span><span style="color:#C19C00;background-color:#0C0C0C;">done<br><br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">echo </span><span style="color:#C50F1F;background-color:#0C0C0C;">"=== last record in /etc/group ==="<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">cat </span><span style="color:#CCCCCC;background-color:#0C0C0C;">/etc/group | </span><span
+style="color:#13A10E;background-color:#0C0C0C;">tail -n </span><span style="color:#0037DA;background-color:#0C0C0C;">1<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">echo </span><span style="color:#C50F1F;background-color:#0C0C0C;">"=== last records in /etc/passwd ==="<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">cat </span><span style="color:#CCCCCC;background-color:#0C0C0C;">/etc/passwd | </span><span
+style="color:#13A10E;background-color:#0C0C0C;">tail -n </span><span style="color:#CCCCCC;background-color:#0C0C0C;">$(</span><span
+style="color:#13A10E;background-color:#0C0C0C;">cat </span><span style="color:#CCCCCC;background-color:#0C0C0C;">band | </span><span
+style="color:#13A10E;background-color:#0C0C0C;">wc -l</span><span style="color:#CCCCCC;background-color:#0C0C0C;">)<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">echo </span><span style="color:#C50F1F;background-color:#0C0C0C;">"=== list of /home directory  ==="<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">ls -l </span><span style="color:#CCCCCC;background-color:#0C0C0C;">/home<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ nano down-band<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ cat down-band | highlight -O ansi -S bash<br></span><span
+style="color:#0037DA;background-color:#0C0C0C;">#!/bin/bash<br><br></span><span
+style="color:#C19C00;background-color:#0C0C0C;">if </span><span style="color:#13A10E;background-color:#0C0C0C;">test </span><span
+style="color:#C50F1F;background-color:#0C0C0C;">`id -u` </span><span style="color:#13A10E;background-color:#0C0C0C;">-ne </span><span
+style="color:#0037DA;background-color:#0C0C0C;">0<br></span><span style="color:#C19C00;background-color:#0C0C0C;">then<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#13A10E;background-color:#0C0C0C;">echo </span><span
+style="color:#C50F1F;background-color:#0C0C0C;">"ur not root bro"<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#13A10E;background-color:#0C0C0C;">exit </span><span
+style="color:#0037DA;background-color:#0C0C0C;">1<br></span><span style="color:#C19C00;background-color:#0C0C0C;">fi<br><br>for </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">i </span><span style="color:#C19C00;background-color:#0C0C0C;">in </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$(</span><span style="color:#13A10E;background-color:#0C0C0C;">cat </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">band)<br></span><span style="color:#C19C00;background-color:#0C0C0C;">do<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">    deluser </span><span style="color:#13A10E;background-color:#0C0C0C;">$i<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">    </span><span style="color:#13A10E;background-color:#0C0C0C;">rm -rf </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">/home/</span><span style="color:#13A10E;background-color:#0C0C0C;">$i<br></span><span
+style="color:#C19C00;background-color:#0C0C0C;">done<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">delgroup team<br><br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">echo </span><span style="color:#C50F1F;background-color:#0C0C0C;">"=== last record in /etc/group ==="<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">cat </span><span style="color:#CCCCCC;background-color:#0C0C0C;">/etc/group | </span><span
+style="color:#13A10E;background-color:#0C0C0C;">tail -n </span><span style="color:#0037DA;background-color:#0C0C0C;">1<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">echo </span><span style="color:#C50F1F;background-color:#0C0C0C;">"=== last record in /etc/passwd ==="<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">cat </span><span style="color:#CCCCCC;background-color:#0C0C0C;">/etc/passwd | </span><span
+style="color:#13A10E;background-color:#0C0C0C;">tail -n </span><span style="color:#0037DA;background-color:#0C0C0C;">1<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">echo </span><span style="color:#C50F1F;background-color:#0C0C0C;">"=== list of /home directory  ==="<br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">ls -l </span><span style="color:#CCCCCC;background-color:#0C0C0C;">/home<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ chmod +x up-band down-band<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ ls -l<br>total 20<br>-rw-r--r-- 1 it it  63 Nov 15 09:08 ba<br>-rw-r--r-- 1 it it  63 Nov 15 09:32 band<br>-rwxr-xr-x 1 it it 347 Nov 15 10:22 </span><span
+style="color:#16C60C;background-color:#0C0C0C;">down-band<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">-rwxr-xr-x 1 it it  54 Nov 15 09:23 </span><span
+style="color:#16C60C;background-color:#0C0C0C;">enum<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">-rwxr-xr-x 1 it it 414 Nov 15 09:53 </span><span
+style="color:#16C60C;background-color:#0C0C0C;">up-band<br>it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ ./up-band<br>ur not root bro<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ sudo ./up-band<br>Adding group `team' (GID 1001) ...<br>Done.<br>=== last record in /etc/group ===<br>team:x:1001:<br>=== last records in /etc/passwd ===<br>woody:x:1001:1001:woody,,,:/home/woody:/bin/bash<br>buzz:x:1002:1001:buzz,,,:/home/buzz:/bin/bash<br>jessie:x:1003:1001:jessie,,,:/home/jessie:/bin/bash<br>bullseye:x:1004:1001:bullseye,,,:/home/bullseye:/bin/bash<br>potato:x:1005:1001:potato,,,:/home/potato:/bin/bash<br>rex:x:1006:1001:rex,,,:/home/rex:/bin/bash<br>slinky:x:1007:1001:slinky,,,:/home/slinky:/bin/bash<br>hamm:x:1008:1001:hamm,,,:/home/hamm:/bin/bash<br>dolly:x:1009:1001:dolly,,,:/home/dolly:/bin/bash<br>bopeep:x:1010:1001:bopeep,,,:/home/bopeep:/bin/bash<br>=== list of /home directory  ===<br>total 44<br>drwx------  2 bopeep   team 4096 Nov 15 10:29 bopeep<br>drwx------  2 bullseye team 4096 Nov 15 10:29 bullseye<br>drwx------  2 buzz     team 4096 Nov 15 10:29 buzz<br>drwx------  2 dolly    team 4096 Nov 15 10:29 dolly<br>drwx------  2 hamm     team 4096 Nov 15 10:29 hamm<br>drwx------ 18 it       it   4096 Nov 15 10:09 it<br>drwx------  2 jessie   team 4096 Nov 15 10:29 jessie<br>drwx------  2 potato   team 4096 Nov 15 10:29 potato<br>drwx------  2 rex      team 4096 Nov 15 10:29 rex<br>drwx------  2 slinky   team 4096 Nov 15 10:29 slinky<br>drwx------  2 woody    team 4096 Nov 15 10:29 woody<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ sudo ./down-band<br>Removing crontab ...<br>Removing user `woody' ...<br>Done.<br>Removing crontab ...<br>Removing user `buzz' ...<br>Done.<br>Removing crontab ...<br>Removing user `jessie' ...<br>Done.<br>Removing crontab ...<br>Removing user `bullseye' ...<br>Done.<br>Removing crontab ...<br>Removing user `potato' ...<br>Done.<br>Removing crontab ...<br>Removing user `rex' ...<br>Done.<br>Removing crontab ...<br>Removing user `slinky' ...<br>Done.<br>Removing crontab ...<br>Removing user `hamm' ...<br>Done.<br>Removing crontab ...<br>Removing user `dolly' ...<br>Done.<br>Removing crontab ...<br>Removing user `bopeep' ...<br>Done.<br>Removing group `team' ...<br>Done.<br>=== last record in /etc/group ===<br>sambashare:x:996:<br>=== last record in /etc/passwd ===<br>Debian-gdm:x:109:117:Gnome Display Manager:/var/lib/gdm3:/bin/false<br>=== list of /home directory  ===<br>total 4<br>drwx------ 18 it it 4096 Nov 15 10:09 it<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~/users</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$</span></div>
+    <p></p>
+  </body>
+</html>

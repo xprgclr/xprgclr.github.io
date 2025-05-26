@@ -1,0 +1,46 @@
+$mask = @()
+$mask += 'c','b','d','l','-' | get-random
+
+$fnames = @(
+  'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 
+  'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 
+  'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon',
+  'Phi', 'Chi', 'Psi', 'Omega'
+)
+
+$unames = @(
+  'Woody', 'Buzz', 'Jessie', 'Bullseye', 'Potato', 'Rex', 
+  'Slinky', 'Hamm', 'Dolly', 'BoPeep'
+)
+
+$gnames = @(
+  'Humans', 'Cyborgs', 'Robots', 'Aliens', 'Vegetables', 
+  'Insects', 'Animals'
+)
+
+$uname = $unames[[int](Get-Random -Maximum ($unames.Count-1))]
+$gname = $gnames[[int](Get-Random -Maximum ($gnames.Count-1))]
+$fname = $fnames[[int](Get-Random -Maximum ($fnames.Count-1))]
+
+0..2 | % {
+  $mask += 'r','-'     | get-random
+  $mask += 'w','-'     | get-random
+  $mask += 'x','s','S' | get-random
+}
+
+$myls = @()
+$myls += [string]::join('',$mask)
+
+$myls += '1','2' | get-random
+
+$myls += $uname
+$myls += $gname
+
+$myls += $myls[0] -eq 'c' ? '1, 0' : 0..1023 | get-random
+
+$myls += get-date -F 'D' | `
+         % { $_ -replace '[A-Z][a-z]+,','' -replace ',','' }
+
+$myls += $fname
+
+"$myls"

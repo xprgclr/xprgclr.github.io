@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>users_session</title>
+  </head>
+  <body>
+    <div style="display:inline-block;white-space:pre;background-color:#282C34;font-family:'Cascadia Mono',monospace;font-size:12pt;padding:4px;"><span
+style="color:#DCDFE4;background-color:#282C34;">PowerShell 7.4.0<br>PS C:\Users\Roman&gt; </span><span
+style="color:#E5C07B;background-color:#282C34;">ssh </span><span style="color:#DCDFE4;background-color:#282C34;">it@192.168.0.110<br>it@192.168.0.110's password:<br>Linux bookworm-unattended 6.1.0-13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.55-1 (2023-09-29) x86_64<br><br>The programs included with the Debian GNU/Linux system are free software;<br>the exact distribution terms for each program are described in the<br>individual files in /usr/share/doc/*/copyright.<br><br>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br>permitted by applicable law.<br>Last login: Thu Nov 23 21:24:45 2023<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ touch band &amp;&amp; nano band<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ cat band<br>santa<br>capybara<br>alpaca<br>dino<br>emily<br>john<br>barbara<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ touch up-band &amp;&amp; nano up-band<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ cat up-band<br>#!/bin/bash<br><br>if test `id -u` -ne 0<br>then<br>  echo "ur not root bro"<br>  exit 1<br>fi<br><br>addgroup team<br>for i in $(cat band)<br>do<br>    adduser --ingroup team $i &lt;&lt; BASTA 2&gt;&amp;1 | cat &gt; /dev/null<br>$i<br>$i<br>$i<br><br>y<br>BASTA<br>done<br><br>echo "=== last record in /etc/group ==="<br>cat /etc/group | tail -n 1<br>echo "=== last records in /etc/passwd ==="<br>cat /etc/passwd | tail -n $(cat band | wc -l)<br>echo "=== list of /home directory  ==="<br>ls -l /home<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$<br></span><span style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ sudo apt install highlight<br>[sudo] password for it:<br>Reading package lists... Done<br>Building dependency tree... Done<br>Reading state information... Done<br>The following additional packages will be installed:<br>  highlight-common liblua5.2-0<br>The following NEW packages will be installed:<br>  highlight highlight-common liblua5.2-0<br>0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.<br>Need to get 702 kB of archives.<br>After this operation, 2,547 kB of additional disk space will be used.<br>Do you want to continue? [Y/n] y<br>Get:1 http://ftp.ee.debian.org/debian bookworm/main amd64 liblua5.2-0 amd64 5.2.4-3 [111 kB]<br>Get:2 http://ftp.ee.debian.org/debian bookworm/main amd64 highlight-common all 3.41-2 [210 kB]<br>Get:3 http://ftp.ee.debian.org/debian bookworm/main amd64 highlight amd64 3.41-2+b6 [381 kB]<br>Fetched 702 kB in 0s (3,204 kB/s)<br>Selecting previously unselected package liblua5.2-0:amd64.<br>(Reading database ... 21784 files and directories currently installed.)<br>Preparing to unpack .../liblua5.2-0_5.2.4-3_amd64.deb ...<br>Unpacking liblua5.2-0:amd64 (5.2.4-3) ...<br>Selecting previously unselected package highlight-common.<br>Preparing to unpack .../highlight-common_3.41-2_all.deb ...<br>Unpacking highlight-common (3.41-2) ...<br>Selecting previously unselected package highlight.<br>Preparing to unpack .../highlight_3.41-2+b6_amd64.deb ...<br>Unpacking highlight (3.41-2+b6) ...<br>Setting up highlight-common (3.41-2) ...<br>Setting up liblua5.2-0:amd64 (5.2.4-3) ...<br>Setting up highlight (3.41-2+b6) ...<br>Processing triggers for libc-bin (2.36-9+deb12u3) ...<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ cat up-band | highlight -O ansi -S bash<br></span><span
+style="color:#61AFEF;background-color:#282C34;">#!/bin/bash<br><br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#98C379;background-color:#282C34;">test </span><span
+style="color:#E06C75;background-color:#282C34;">`id -u` </span><span style="color:#98C379;background-color:#282C34;">-ne </span><span
+style="color:#61AFEF;background-color:#282C34;">0<br></span><span style="color:#E5C07B;background-color:#282C34;">then<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#98C379;background-color:#282C34;">echo </span><span
+style="color:#E06C75;background-color:#282C34;">"ur not root bro"<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#98C379;background-color:#282C34;">exit </span><span
+style="color:#61AFEF;background-color:#282C34;">1<br></span><span style="color:#E5C07B;background-color:#282C34;">fi<br><br></span><span
+style="color:#DCDFE4;background-color:#282C34;">addgroup team<br></span><span style="color:#E5C07B;background-color:#282C34;">for </span><span
+style="color:#DCDFE4;background-color:#282C34;">i </span><span style="color:#E5C07B;background-color:#282C34;">in </span><span
+style="color:#DCDFE4;background-color:#282C34;">$(</span><span style="color:#98C379;background-color:#282C34;">cat </span><span
+style="color:#DCDFE4;background-color:#282C34;">band)<br></span><span style="color:#E5C07B;background-color:#282C34;">do<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    adduser </span><span style="color:#98C379;background-color:#282C34;">--ingroup </span><span
+style="color:#DCDFE4;background-color:#282C34;">team </span><span style="color:#98C379;background-color:#282C34;">$i </span><span
+style="color:#E06C75;background-color:#282C34;">&lt;&lt; BASTA 2&gt;&amp;1 | cat &gt; /dev/null<br></span><span
+style="color:#C678DD;background-color:#282C34;">$i<br>$i<br>$i<br><br></span><span
+style="color:#E06C75;background-color:#282C34;">y<br>BASTA<br></span><span style="color:#E5C07B;background-color:#282C34;">done<br><br></span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"=== last record in /etc/group ==="<br></span><span
+style="color:#98C379;background-color:#282C34;">cat </span><span style="color:#DCDFE4;background-color:#282C34;">/etc/group | </span><span
+style="color:#98C379;background-color:#282C34;">tail -n </span><span style="color:#61AFEF;background-color:#282C34;">1<br></span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"=== last records in /etc/passwd ==="<br></span><span
+style="color:#98C379;background-color:#282C34;">cat </span><span style="color:#DCDFE4;background-color:#282C34;">/etc/passwd | </span><span
+style="color:#98C379;background-color:#282C34;">tail -n </span><span style="color:#DCDFE4;background-color:#282C34;">$(</span><span
+style="color:#98C379;background-color:#282C34;">cat </span><span style="color:#DCDFE4;background-color:#282C34;">band | </span><span
+style="color:#98C379;background-color:#282C34;">wc -l</span><span style="color:#DCDFE4;background-color:#282C34;">)<br></span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"=== list of /home directory  ==="<br></span><span
+style="color:#98C379;background-color:#282C34;">ls -l </span><span style="color:#DCDFE4;background-color:#282C34;">/home<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ chmod +x up-band<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ sudo ./up-band<br>Adding group `team' (GID 1001) ...<br>Done.<br>=== last record in /etc/group ===<br>team:x:1001:<br>=== last records in /etc/passwd ===<br>santa:x:1001:1001:santa,,y,:/home/santa:/bin/bash<br>capybara:x:1002:1001:capybara,,y,:/home/capybara:/bin/bash<br>alpaca:x:1003:1001:alpaca,,y,:/home/alpaca:/bin/bash<br>dino:x:1004:1001:dino,,y,:/home/dino:/bin/bash<br>emily:x:1005:1001:emily,,y,:/home/emily:/bin/bash<br>john:x:1006:1001:john,,y,:/home/john:/bin/bash<br>barbara:x:1007:1001:barbara,,y,:/home/barbara:/bin/bash<br>=== list of /home directory  ===<br>total 32<br>drwx------ 2 alpaca   team 4096 Nov 26 12:14 alpaca<br>drwx------ 2 barbara  team 4096 Nov 26 12:14 barbara<br>drwx------ 2 capybara team 4096 Nov 26 12:14 capybara<br>drwx------ 2 dino     team 4096 Nov 26 12:14 dino<br>drwx------ 2 emily    team 4096 Nov 26 12:14 emily<br>drwx------ 3 it       it   4096 Nov 26 12:08 it<br>drwx------ 2 john     team 4096 Nov 26 12:14 john<br>drwx------ 2 santa    team 4096 Nov 26 12:14 santa<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ ls -l<br>total 8<br>-rw-r--r-- 1 it it  46 Nov 26 12:07 band<br>-rwxr-xr-x 1 it it 411 Nov 26 12:08 </span><span
+style="color:#98C379;background-color:#282C34;">up-band<br>it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ touch down-band &amp;&amp; nano down-band<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ cat down-band | highlight -O ansi -S bash<br></span><span
+style="color:#61AFEF;background-color:#282C34;">#!/bin/bash<br><br></span><span
+style="color:#E5C07B;background-color:#282C34;">if </span><span style="color:#98C379;background-color:#282C34;">test </span><span
+style="color:#E06C75;background-color:#282C34;">`id -u` </span><span style="color:#98C379;background-color:#282C34;">-ne </span><span
+style="color:#61AFEF;background-color:#282C34;">0<br></span><span style="color:#E5C07B;background-color:#282C34;">then<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#98C379;background-color:#282C34;">echo </span><span
+style="color:#E06C75;background-color:#282C34;">"ur not root bro"<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">  </span><span style="color:#98C379;background-color:#282C34;">exit </span><span
+style="color:#61AFEF;background-color:#282C34;">1<br></span><span style="color:#E5C07B;background-color:#282C34;">fi<br><br>for </span><span
+style="color:#DCDFE4;background-color:#282C34;">i </span><span style="color:#E5C07B;background-color:#282C34;">in </span><span
+style="color:#DCDFE4;background-color:#282C34;">$(</span><span style="color:#98C379;background-color:#282C34;">cat </span><span
+style="color:#DCDFE4;background-color:#282C34;">band)<br></span><span style="color:#E5C07B;background-color:#282C34;">do<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    deluser </span><span style="color:#98C379;background-color:#282C34;">$i<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">    </span><span style="color:#98C379;background-color:#282C34;">rm -rf </span><span
+style="color:#DCDFE4;background-color:#282C34;">/home/</span><span style="color:#98C379;background-color:#282C34;">$i<br></span><span
+style="color:#E5C07B;background-color:#282C34;">done<br></span><span style="color:#DCDFE4;background-color:#282C34;">delgroup team<br><br></span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"=== last record in /etc/group ==="<br></span><span
+style="color:#98C379;background-color:#282C34;">cat </span><span style="color:#DCDFE4;background-color:#282C34;">/etc/group | </span><span
+style="color:#98C379;background-color:#282C34;">tail -n </span><span style="color:#61AFEF;background-color:#282C34;">1<br></span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"=== last record in /etc/passwd ==="<br></span><span
+style="color:#98C379;background-color:#282C34;">cat </span><span style="color:#DCDFE4;background-color:#282C34;">/etc/passwd | </span><span
+style="color:#98C379;background-color:#282C34;">tail -n </span><span style="color:#61AFEF;background-color:#282C34;">1<br></span><span
+style="color:#98C379;background-color:#282C34;">echo </span><span style="color:#E06C75;background-color:#282C34;">"=== list of /home directory  ==="<br></span><span
+style="color:#98C379;background-color:#282C34;">ls -l </span><span style="color:#DCDFE4;background-color:#282C34;">/home<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ chmod +x down-band<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ sudo ./down-band<br>Removing crontab ...<br>Removing user `santa' ...<br>Done.<br>Removing crontab ...<br>Removing user `capybara' ...<br>Done.<br>Removing crontab ...<br>Removing user `alpaca' ...<br>Done.<br>Removing crontab ...<br>Removing user `dino' ...<br>Done.<br>Removing crontab ...<br>Removing user `emily' ...<br>Done.<br>Removing crontab ...<br>Removing user `john' ...<br>Done.<br>Removing crontab ...<br>Removing user `barbara' ...<br>Done.<br>Removing group `team' ...<br>Done.<br>=== last record in /etc/group ===<br>_ssh:x:110:<br>=== last record in /etc/passwd ===<br>sshd:x:102:65534::/run/sshd:/usr/sbin/nologin<br>=== list of /home directory  ===<br>total 4<br>drwx------ 3 it it 4096 Nov 26 12:17 it<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$</span></div>
+    <p></p>
+  </body>
+</html>

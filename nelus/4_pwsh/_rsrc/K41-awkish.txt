@@ -1,0 +1,409 @@
+﻿K41
+
+                But why use PowerShell.. on Linux?
+                One reason is the beauty of the language and 
+                the powerful capability of the object-piping*.
+                  
+                *) https://www.starwindsoftware.com
+                   /blog/using-powershell-on-linux
+
+
+# TASKBOOK
+==========
+
+Solve in Powershell:
+
+1. PRINT BINARY NUMBERS WITH LEADING ZEROES, LIKE SO:
+-----------------------------------------------------
+
+  0  00 
+  1  01
+  2  10 
+  3  11
+  ..
+
+awk solution
+
+# awk -f 1.awk
+BEGIN {
+  N=3; # number of bits
+  n=1; a[0]="";
+  for(i=0;i<3;i++) {
+    for(j=0;j<n;j++) { 
+      a[n+j]="1"a[j]; 
+      a[j]="0"a[j]; 
+    }
+    n+=j;
+  }
+  for(i=0;i<n;i++) 
+    print i," ", a[i];
+}
+
+2. PRINT BINARY NUMBERS WITH LEADING ZEROES, LIKE SO:
+-----------------------------------------------------
+
+  00 01 10 11
+  
+awk solution
+
+# awk -f 2.awk
+BEGIN {
+  ORS=" "; # the output record separator
+  N=3;     # number of bits
+  n=1; a[0]="";
+  for(i=0;i<3;i++) {
+    for(j=0;j<n;j++) { 
+      a[n+j]="1"a[j]; 
+      a[j]="0"a[j]; 
+    }
+    n+=j;
+  }
+  for(i=0;i<n;i++) 
+    print a[i];
+  ORS="\n"; print;
+}
+
+3. PRINT TRUTH TABLE FOR NOT, OR, XOR, AND
+------------------------------------------
+
+# gawk -f 3.awk
+BEGIN {
+  n=1; a[0]="";
+  for(i=0;i<2;i++) {
+    for(j=0;j<n;j++) {
+      a[n+j]="1"a[j];
+      a[j]="0"a[j];
+    }
+    n+=j;
+  }
+  print "n","ab","!a","!b","OR","XOR","AND"
+  for(i=0;i<n;i++)
+    print i, a[i], "",
+    xor(rshift(and(i,2),1),1), "",
+    xor(and(i,1),1), "",
+    or(and(i,1),rshift(and(i,2),1)), "",
+    xor(and(i,1),rshift(and(i,2),1)), "",
+    and(and(i,1),rshift(and(i,2),1));
+}
+
+$ gawk -f 2.awk
+n ab !a !b OR XOR AND
+0 00  1  1  0  0  0
+1 01  1  0  1  1  0
+2 10  0  1  1  1  0
+3 11  0  0  1  0  1
+
+
+4. PRINT CYRILLIC ALPHABET
+--------------------------
+
+# awk -f 4.awk
+function chr(c) {
+  return sprintf("%c",c+0)
+}
+
+BEGIN {
+  ORS=""
+  for (x=0x410;x<=0x44f;x++) {
+    if(x==0x430) print "\n";
+    print chr(x);
+  }
+  ORS="\n"; print;
+}
+
+АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+абвгдежзийклмнопрстуфхцчшщъыьэюя
+
+
+5. ALFRED VAIL'S CODE (MORSE CODE)
+----------------------------------
+
+# awk -f 5.awk
+BEGIN {
+  si="ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  s=".-:-...:-.-.:-..:.:..-.:--.:....:..:.---:-.-:.-..:--:";
+  s=s"-.:---:.--.:--.-:.-.:...:-:..-:...-:.--:-..-:-.--:--..: ";
+  split(si,idx,"");
+  split(s,cipher,":");
+  for(i in idx) ci[idx[i]]=i;
+  splain="HELLO WORLD";
+  split(splain,plain,"");
+  for(i in plain) printf("%s ", cipher[ci[plain[i]]]);
+  print;
+}
+
+
+6. SIMPLE CALCULATOR
+--------------------
+
+# echo 2 + 3 | awk -f 6.awk
+{
+  z=0;
+  switch ($2) {
+    case "+" : z=$1+$3; break;
+    case "-" : z=$1-$3; break;
+    case "*" : z=$1*$3; break;
+    case "/" : z=$1/$3; break;
+    case "%" : z=$1%$3; break;
+    default  : print "Illegal Operation",$2;
+  }
+  print $0," : ",$1,$2,$3,"=",z;
+}
+
+
+7. MULTIPLICATION TABLE FOR BASE 10
+-----------------------------------
+
+# echo 10 | awk -f 7.awk
+{
+  printf("  :"); 
+  for(y=1;y<=$1-1;y++) 
+    printf("  %d",y); 
+  printf("\n");
+  printf("..."); 
+  for(y=1;y<=$1-1;y++) 
+    printf(" .."); 
+  printf("\n");
+  for(x=1;x<=$1-1;x++) {
+    printf("%d : ",x);
+    for(y=1;y<=$1-1;y++) 
+      printf("%02d ",x*y); 
+    printf("\n");
+  }
+}
+
+$ echo 10 | awk -f 7.awk
+  :  1  2  3  4  5  6  7  8  9
+... .. .. .. .. .. .. .. .. ..
+1 : 01 02 03 04 05 06 07 08 09
+2 : 02 04 06 08 10 12 14 16 18
+3 : 03 06 09 12 15 18 21 24 27
+4 : 04 08 12 16 20 24 28 32 36
+5 : 05 10 15 20 25 30 35 40 45
+6 : 06 12 18 24 30 36 42 48 54
+7 : 07 14 21 28 35 42 49 56 63
+8 : 08 16 24 32 40 48 56 64 72
+9 : 09 18 27 36 45 54 63 72 81
+
+
+8. DELAY INTRODUCED
+-------------------
+
+# echo 1010 1101 | awk -f this.awk
+
+BEGIN {
+  print $1;
+  system("sleep 1.2");
+  print $2;
+}
+
+
+9. VALIDATE BOOLEAN
+-------------------
+
+# echo false | awk -f 9.awk
+{
+  x=$0;
+  x=x=="true"?1:x; x=x=="false"?0:x;
+  print x~/^(0|1)$/?"Ok":"NaB",x
+}
+
+
+10. VALIDATE INTEGER
+--------------------
+
+# echo -1074 | awk -f 10.awk
+{
+  print $0 ~ /^([+-]?[1-9][0-9]*|0)$/ ? "Ok" : "NaN",$0
+}
+
+
+11. VALIDATE REAL
+-----------------
+
+# echo +1.074e-3 | awk -f 10.awk
+{
+  print $0~/^([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)$/?"Ok":"NaN",$0
+}
+
+
+ToDo
+
+12..n Operations with decimals, step by step: +, -, *, \, %
+
+      Operations with binaries, step by step: COM2, +, MASK
+      
+      
+99. MORSE AND BACK. UNIX STYLE
+------------------------------
+
+$ cat lookup
+A  .-
+B  -...
+C  -.-.
+D  -..
+E  .
+F  ..-.
+G  --.
+H  ....
+I  ..
+J  .---
+K  -.-
+L  .-..
+M  --
+N  -.
+O  ---
+P  .--.
+Q  --.-
+R  .-.
+S  ...
+T  -
+U  ..-
+V  ...-
+W  .--
+X  -..-
+Y  -.--
+Z  --..
+0  -----
+1  .----
+2  ..---
+3  ...--
+4  ....-
+5  .....
+6  -....
+7  --...
+8  ---..
+9  ----.
+
+$ cat lookup | awk '{print $2"\t"$1}' > rlookup
+
+$ cat wrd
+K
+O
+H
+U
+K
+E
+
+$ awk 'NR==FNR{a[$1]=$2;next} $1 in a {print a[$1]}' lookup wrd > rwrd
+
+$ cat rwrd
+-.-
+---
+....
+..-
+-.-
+.
+
+$ awk 'NR==FNR{a[$1]=$2;next} $1 in a {print a[$1]}' rlookup rwrd
+K
+O
+H
+U
+K
+E
+
+$ cat cyrlkp
+
+А  .-
+Б  -...
+В  .--
+Г  --.
+Д  -..
+Е  .
+Ж  ...-
+З  --..
+И  ..
+Й  .---
+К  -.-
+Л  .-..
+М  --
+Н  -.
+О  ---
+П  .--.
+Р  .-.
+С  ...
+Т  -
+У  ..-
+Ф  ..-.
+Х  ....
+Ц  -.-.
+Ч  ---.
+Ш  ----
+Щ  --.-
+Ъ  --.--
+Ы  -.--
+Ь  -..-
+Э  ..-..
+Ю  ..--
+Я  .-.-
+0  -----
+1  .----
+2  ..---
+3  ...--
+4  ....-
+5  .....
+6  -....
+7  --...
+8  ---..
+9  ----.
+
+$ cat cwrd
+У
+Т
+К
+А
+
+$ awk 'NR==FNR{a[$1]=$2;next} $1 in a {print a[$1]}' cyrlkp cwrd
+..-
+-
+-.-
+.-
+
+$ cat cyrlkp | awk '{print $2"\t"$1}' > rcyrlkp
+
+$ awk 'NR==FNR{a[$1]=$2;next} $1 in a {print a[$1]}' cyrlkp cwrd > rcwrd
+$ awk 'NR==FNR{a[$1]=$2;next} $1 in a {print a[$1]}' rcyrlkp rcwrd
+
+У
+Т
+К
+А
+
+
+# LINKS
+
+1. https://stackoverflow.com/questions/9351902
+     /how-can-i-get-the-length-of-an-array-in-awk
+
+2. The way you introduce local variables in awk is as extra function parameters and the convention is to indicate this by adding extra spaces before these parameters.
+
+3. ORS -- The output record separator, by default a newline.
+
+   https://stackoverflow.com/questions/24331687
+     /is-it-possible-to-print-the-awk-output-in-the-same-line
+     
+4. ord() and chr() in awk
+
+  https://www.gnu.org/software/gawk/manual/html_node
+    /Ordinal-Functions.html
+    
+5. Initialize array in awk
+
+  https://stackoverflow.com/questions/14063783
+    /how-to-initialize-an-array-of-arrays-in-awk
+    
+6. Use prinft instead of print
+
+  https://stackoverflow.com/questions/2021982
+    /awk-without-printing-newline
+     
+7. Basic idea for example 6
+
+  https://www.unix.com/shell-programming-and-scripting
+    /60653-search-replace-string-file1-string-lookup-table-file2.html
+
+8. Script explained step by step
+
+  https://stackoverflow.com/questions/32481877
+    /what-are-nr-and-fnr-and-what-does-nr-fnr-imply

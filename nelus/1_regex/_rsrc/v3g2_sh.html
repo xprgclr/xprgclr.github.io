@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>v3g2</title>
+  </head>
+  <body>
+    <div style="display:inline-block;white-space:pre;background-color:#282C34;font-family:'Cascadia Mono',monospace;font-size:12pt;padding:4px;"><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$ batcat v3g2.sh<br></span><span
+style="color:#444444;background-color:#282C34;">───────┬──────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#DCDFE4;background-color:#282C34;">       </span><span style="color:#444444;background-color:#282C34;">│ </span><span
+style="color:#DCDFE4;background-color:#282C34;">File: v3g2.sh<br></span><span style="color:#444444;background-color:#282C34;">───────┼──────────────────────────────────────────────────────────────────────────────────────────────<br>   1   │ </span><span
+style="color:#FFFFFF;background-color:#282C34;">cat kit.txt </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">awk </span><span style="color:#FF8700;background-color:#282C34;">-f </span><span
+style="color:#FFFFFF;background-color:#282C34;">stage.awk \<br></span><span style="color:#444444;background-color:#282C34;">   2   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">perl </span><span style="color:#FF8700;background-color:#282C34;">-pe </span><span
+style="color:#FFFFFF;background-color:#282C34;">'</span><span style="color:#D7D787;background-color:#282C34;">s/[ ,]+"$/"/</span><span
+style="color:#FFFFFF;background-color:#282C34;">' \<br></span><span style="color:#444444;background-color:#282C34;">   3   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">grep </span><span style="color:#FF8700;background-color:#282C34;">-P </span><span
+style="color:#FFFFFF;background-color:#282C34;">ROOM \<br></span><span style="color:#444444;background-color:#282C34;">   4   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">sort \<br></span><span style="color:#444444;background-color:#282C34;">   5   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">uniq </span><span style="color:#FF8700;background-color:#282C34;">-c </span><span
+style="color:#FFFFFF;background-color:#282C34;">\<br></span><span style="color:#444444;background-color:#282C34;">   6   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">nl \<br></span><span style="color:#444444;background-color:#282C34;">   7   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">tr </span><span style="color:#FF8700;background-color:#282C34;">-d </span><span
+style="color:#FFFFFF;background-color:#282C34;">'</span><span style="color:#D7D787;background-color:#282C34;">"</span><span
+style="color:#FFFFFF;background-color:#282C34;">' \<br></span><span style="color:#444444;background-color:#282C34;">   8   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">perl </span><span style="color:#FF8700;background-color:#282C34;">-pe </span><span
+style="color:#FFFFFF;background-color:#282C34;">'</span><span style="color:#D7D787;background-color:#282C34;">s/ROOM: //</span><span
+style="color:#FFFFFF;background-color:#282C34;">' \<br></span><span style="color:#444444;background-color:#282C34;">   9   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">awk '</span><span style="color:#D7D787;background-color:#282C34;">{print $1, $4, $3, $2}</span><span
+style="color:#FFFFFF;background-color:#282C34;">' \<br></span><span style="color:#444444;background-color:#282C34;">  10   │</span><span
+style="color:#DCDFE4;background-color:#282C34;">             </span><span style="color:#FF5F5F;background-color:#282C34;">| </span><span
+style="color:#FFFFFF;background-color:#282C34;">sort<br></span><span style="color:#444444;background-color:#282C34;">───────┴──────────────────────────────────────────────────────────────────────────────────────────────<br></span><span
+style="color:#98C379;background-color:#282C34;">it@bookworm-unattended</span><span
+style="color:#DCDFE4;background-color:#282C34;">:</span><span style="color:#61AFEF;background-color:#282C34;">~</span><span
+style="color:#DCDFE4;background-color:#282C34;">$</span></div>
+    <p></p>
+  </body>
+</html>

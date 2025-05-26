@@ -1,0 +1,16 @@
+it@bookworm-unattended:~$ history
+    5  touch band && nano band
+    6  cat band
+    7  touch up-band && nano up-band
+    8  cat up-band
+    9  sudo apt install highlight
+   10  cat up-band | highlight -O ansi -S bash
+   11  chmod +x up-band
+   12  sudo ./up-band
+   13  ls -l
+   14  touch down-band && nano down-band
+   15  cat down-band | highlight -O ansi -S bash
+   16  chmod +x down-band
+   17  sudo ./down-band
+   18  history
+it@bookworm-unattended:~$

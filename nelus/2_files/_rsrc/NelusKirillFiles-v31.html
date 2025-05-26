@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>NelusKirillFiles-v31</title>
+  </head>
+  <body>
+    <div style="display:inline-block;white-space:pre;background-color:#0C0C0C;font-family:'Cascadia Mono',monospace;font-size:18pt;padding:4px;"><span
+style="color:#CCCCCC;background-color:#0C0C0C;">PS C:\KIT23V&gt; </span><span style="color:#F9F1A5;background-color:#0C0C0C;">ssh </span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">it@192.168.154.220<br>The authenticity of host '192.168.154.220 (192.168.154.220)' can't be established.<br>ECDSA key fingerprint is SHA256:l2BDEzRUCkjZdbQb0ynBeeSrPki5L9aH8vANmuo7dBQ.<br>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes<br>Warning: Permanently added '192.168.154.220' (ECDSA) to the list of known hosts.<br>it@192.168.154.220's password:<br>Linux bookworm-unattended 6.1.0-13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.55-1 (2023-09-29) x86_64<br><br>The programs included with the Debian GNU/Linux system are free software;<br>the exact distribution terms for each program are described in the<br>individual files in /usr/share/doc/*/copyright.<br><br>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br>permitted by applicable law.<br>Last login: Mon Nov 13 12:36:08 2023 from 172.24.32.1<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ lsblk<br>NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS<br>sda      8:0    0   32G  0 disk<br>├─sda1   8:1    0  512M  0 part /boot/efi<br>├─sda2   8:2    0 30.5G  0 part /<br>└─sda3   8:3    0  976M  0 part [SWAP]<br>sdb      8:16   0    1G  0 disk<br>sr0     11:0    1 1024M  0 rom<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ sudo fdisk /dev/sdb<br>[sudo] password for it:<br><br></span><span
+style="color:#13A10E;background-color:#0C0C0C;">Welcome to fdisk (util-linux 2.38.1).<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">Changes will remain in memory only, until you decide to write them.<br>Be careful before using the write command.<br><br>Device does not contain a recognized partition table.<br>Created a new DOS (MBR) disklabel with disk identifier 0xe7632080.<br><br>Command (m for help): m<br><br>Help:<br><br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">  DOS (MBR)<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">   a   toggle a bootable flag<br>   b   edit nested BSD disklabel<br>   c   toggle the dos compatibility flag<br><br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">  Generic<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">   d   delete a partition<br>   F   list free unpartitioned space<br>   l   list known partition types<br>   n   add a new partition<br>   p   print the partition table<br>   t   change a partition type<br>   v   verify the partition table<br>   i   print information about a partition<br><br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">  Misc<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">   m   print this menu<br>   u   change display/entry units<br>   x   extra functionality (experts only)<br><br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">  Script<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">   I   load disk layout from sfdisk script file<br>   O   dump disk layout to sfdisk script file<br><br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">  Save &amp; Exit<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">   w   write table to disk and exit<br>   q   quit without saving changes<br><br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">  Create a new label<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">   g   create a new empty GPT partition table<br>   G   create a new empty SGI (IRIX) partition table<br>   o   create a new empty MBR (DOS) partition table<br>   s   create a new empty Sun partition table<br><br><br>Command (m for help): p<br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">Disk /dev/sdb: 1 GiB, 1073741824 bytes, 2097152 sectors<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">Disk model: Virtual Disk<br>Units: sectors of 1 * 512 = 512 bytes<br>Sector size (logical/physical): 512 bytes / 4096 bytes<br>I/O size (minimum/optimal): 4096 bytes / 4096 bytes<br>Disklabel type: dos<br>Disk identifier: 0xe7632080<br><br>Command (m for help): n<br>Partition type<br>   p   primary (0 primary, 0 extended, 4 free)<br>   e   extended (container for logical partitions)<br>Select (default p):<br><br>Using default response p.<br>Partition number (1-4, default 1):<br>First sector (2048-2097151, default 2048):<br>Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-2097151, default 2097151):<br><br>Created a new partition 1 of type 'Linux' and of size 1023 MiB.<br><br>Command (m for help): p<br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">Disk /dev/sdb: 1 GiB, 1073741824 bytes, 2097152 sectors<br></span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">Disk model: Virtual Disk<br>Units: sectors of 1 * 512 = 512 bytes<br>Sector size (logical/physical): 512 bytes / 4096 bytes<br>I/O size (minimum/optimal): 4096 bytes / 4096 bytes<br>Disklabel type: dos<br>Disk identifier: 0xe7632080<br><br></span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">Device    </span><span style="color:#CCCCCC;background-color:#0C0C0C;"> </span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">Boot</span><span style="color:#CCCCCC;background-color:#0C0C0C;"> </span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">Start</span><span style="color:#CCCCCC;background-color:#0C0C0C;"> </span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">    End</span><span style="color:#CCCCCC;background-color:#0C0C0C;"> </span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">Sectors</span><span style="color:#CCCCCC;background-color:#0C0C0C;"> </span><span
+style="color:#F2F2F2;background-color:#0C0C0C;"> Size</span><span style="color:#CCCCCC;background-color:#0C0C0C;"> </span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">Id</span><span style="color:#CCCCCC;background-color:#0C0C0C;"> </span><span
+style="color:#F2F2F2;background-color:#0C0C0C;">Type<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">/dev/sdb1        2048 2097151 2095104 1023M 83 Linux<br><br>Command (m for help): w<br>The partition table has been altered.<br>Calling ioctl() to re-read partition table.<br>Syncing disks.<br><br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ lsblk<br>NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS<br>sda      8:0    0   32G  0 disk<br>├─sda1   8:1    0  512M  0 part /boot/efi<br>├─sda2   8:2    0 30.5G  0 part /<br>└─sda3   8:3    0  976M  0 part [SWAP]<br>sdb      8:16   0    1G  0 disk<br>└─sdb1   8:17   0 1023M  0 part<br>sr0     11:0    1 1024M  0 rom<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ sudo mkfs.ext4 /dev/sdb1<br>mke2fs 1.47.0 (5-Feb-2023)<br>Discarding device blocks: done<br>Creating filesystem with 261888 4k blocks and 65536 inodes<br>Filesystem UUID: 0f4efaf1-4a9c-4595-873e-b807c9b9a9ea<br>Superblock backups stored on blocks:<br>        32768, 98304, 163840, 229376<br><br>Allocating group tables: done<br>Writing inode tables: done<br>Creating journal (4096 blocks): done<br>Writing superblocks and filesystem accounting information: done<br><br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ ls /<br></span><span style="color:#61D6D6;background-color:#0C0C0C;">bin</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">   </span><span style="color:#3B78FF;background-color:#0C0C0C;">etc</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">         </span><span style="color:#61D6D6;background-color:#0C0C0C;">initrd.img.old</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#61D6D6;background-color:#0C0C0C;">lib64</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">       </span><span style="color:#3B78FF;background-color:#0C0C0C;">media</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#3B78FF;background-color:#0C0C0C;">proc</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#61D6D6;background-color:#0C0C0C;">sbin</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#0C0C0C;background-color:#13A10E;">tmp</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#61D6D6;background-color:#0C0C0C;">vmlinuz<br></span><span
+style="color:#3B78FF;background-color:#0C0C0C;">boot</span><span style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span
+style="color:#3B78FF;background-color:#0C0C0C;">home</span><span style="color:#CCCCCC;background-color:#0C0C0C;">        </span><span
+style="color:#61D6D6;background-color:#0C0C0C;">lib</span><span style="color:#CCCCCC;background-color:#0C0C0C;">             </span><span
+style="color:#61D6D6;background-color:#0C0C0C;">libx32</span><span style="color:#CCCCCC;background-color:#0C0C0C;">      </span><span
+style="color:#3B78FF;background-color:#0C0C0C;">mnt</span><span style="color:#CCCCCC;background-color:#0C0C0C;">    </span><span
+style="color:#3B78FF;background-color:#0C0C0C;">root</span><span style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span
+style="color:#3B78FF;background-color:#0C0C0C;">srv</span><span style="color:#CCCCCC;background-color:#0C0C0C;">   </span><span
+style="color:#3B78FF;background-color:#0C0C0C;">usr</span><span style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span
+style="color:#61D6D6;background-color:#0C0C0C;">vmlinuz.old<br></span><span style="color:#3B78FF;background-color:#0C0C0C;">dev</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">   </span><span style="color:#61D6D6;background-color:#0C0C0C;">initrd.img</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#61D6D6;background-color:#0C0C0C;">lib32</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">           </span><span style="color:#3B78FF;background-color:#0C0C0C;">lost+found</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">  </span><span style="color:#3B78FF;background-color:#0C0C0C;">opt</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">    </span><span style="color:#3B78FF;background-color:#0C0C0C;">run</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">   </span><span style="color:#3B78FF;background-color:#0C0C0C;">sys</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">   </span><span style="color:#3B78FF;background-color:#0C0C0C;">var<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ mkdir -p /mnt/sdb1<br>mkdir: cannot create directory ‘/mnt/sdb1’: Permission denied<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ sudo mkdir -p /mnt/sdb1<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ sudo -i<br>root@bookworm-unattended:~# mount /dev/sdb1 /mnt/sdb1<br>root@bookworm-unattended:~# ls -l /mnt/sdb1<br>total 16<br>drwx------ 2 root root 16384 Nov 14 11:32 lost+found<br>root@bookworm-unattended:~# echo '31 | Kirill Nelus            | drwS-wS-wT 1 Potato Robots 639  November 14 2023 Tau'<br>31 | Kirill Nelus            | drwS-wS-wT 1 Potato Robots 639  November 14 2023 Tau<br>root@bookworm-unattended:~# adduser Potato<br>adduser: Please enter a username matching the regular expression<br>            configured via the NAME_REGEX configuration variable.  Use the<br>            `--allow-bad-names' option to relax this check or reconfigure<br>            NAME_REGEX in configuration.<br>root@bookworm-unattended:~# adduser potato<br>Adding user `potato' ...<br>Adding new group `potato' (1001) ...<br>Adding new user `potato' (1001) with group `potato (1001)' ...<br>Creating home directory `/home/potato' ...<br>Copying files from `/etc/skel' ...<br>New password:<br>Retype new password:<br>passwd: password updated successfully<br>Changing the user information for potato<br>Enter the new value, or press ENTER for the default<br>        Full Name []: potato<br>        Room Number []: T412<br>        Work Phone []: 000<br>        Home Phone []: 000<br>        Other []:<br>Is the information correct? [Y/n] y<br>Adding new user `potato' to supplemental / extra groups `users' ...<br>Adding user `potato' to group `users' ...<br>root@bookworm-unattended:~# cat /etc/passwd<br>root:x:0:0:root:/root:/bin/bash<br>daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin<br>bin:x:2:2:bin:/bin:/usr/sbin/nologin<br>sys:x:3:3:sys:/dev:/usr/sbin/nologin<br>sync:x:4:65534:sync:/bin:/bin/sync<br>games:x:5:60:games:/usr/games:/usr/sbin/nologin<br>man:x:6:12:man:/var/cache/man:/usr/sbin/nologin<br>lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin<br>mail:x:8:8:mail:/var/mail:/usr/sbin/nologin<br>news:x:9:9:news:/var/spool/news:/usr/sbin/nologin<br>uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin<br>proxy:x:13:13:proxy:/bin:/usr/sbin/nologin<br>www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin<br>backup:x:34:34:backup:/var/backups:/usr/sbin/nologin<br>list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin<br>irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin<br>_apt:x:42:65534::/nonexistent:/usr/sbin/nologin<br>nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin<br>systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin<br>it:x:1000:1000:it,,,:/home/it:/bin/bash<br>messagebus:x:100:107::/nonexistent:/usr/sbin/nologin<br>sshd:x:101:65534::/run/sshd:/usr/sbin/nologin<br>tss:x:102:109:TPM software stack,,,:/var/lib/tpm:/bin/false<br>usbmux:x:103:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin<br>dnsmasq:x:104:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin<br>avahi:x:105:112:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin<br>saned:x:106:113::/var/lib/saned:/usr/sbin/nologin<br>polkitd:x:997:997:polkit:/nonexistent:/usr/sbin/nologin<br>rtkit:x:107:115:RealtimeKit,,,:/proc:/usr/sbin/nologin<br>colord:x:108:116:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin<br>Debian-gdm:x:109:117:Gnome Display Manager:/var/lib/gdm3:/bin/false<br>potato:x:1001:1001:potato,T412,000,000:/home/potato:/bin/bash<br>root@bookworm-unattended:~# addgroup robots<br>Adding group `robots' (GID 1002) ...<br>Done.<br>delgroup  delpart   deluser<br>root@bookworm-unattended:~# nano /etc/passwd<br>root@bookworm-unattended:~# nano /etc/group<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">it@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ exit<br>logout<br>Connection to 192.168.154.220 closed.<br>PS C:\KIT23V&gt; </span><span
+style="color:#F9F1A5;background-color:#0C0C0C;">ssh </span><span style="color:#CCCCCC;background-color:#0C0C0C;">Potato@192.168.154.220<br>Potato@192.168.154.220's password:<br>Linux bookworm-unattended 6.1.0-13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.55-1 (2023-09-29) x86_64<br><br>The programs included with the Debian GNU/Linux system are free software;<br>the exact distribution terms for each program are described in the<br>individual files in /usr/share/doc/*/copyright.<br><br>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br>permitted by applicable law.<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">Potato@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ whoami<br>Potato<br></span><span
+style="color:#16C60C;background-color:#0C0C0C;">Potato@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ mkdir -p Tau<br></span><span style="color:#16C60C;background-color:#0C0C0C;">Potato@bookworm-unattended</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">:</span><span style="color:#3B78FF;background-color:#0C0C0C;">~</span><span
+style="color:#CCCCCC;background-color:#0C0C0C;">$ ls -l<br>total 4<br>drwxr-xr-x 2 Potato Robots 4096 Nov 14 12:24 </span><span
+style="color:#3B78FF;background-color:#0C0C0C;">Tau<br></span><span style="color:#CCCCCC;background-color:#0C0C0C;">root@bookworm-unattended:/home/potato# chmod 7622 Tau<br>root@bookworm-unattended:/home/potato# ls -l<br>total 4<br>drwS-wS-wT 2 Potato Robots 4096 Nov 14 12:24 Tau<br>root@bookworm-unattended:/home/potato# cat /etc/passwd | tail -n 1<br>Potato:x:1001:1002:potato,T412,000,000:/home/potato:/bin/bash<br>root@bookworm-unattended:/home/potato# cat /etc/group | tail -n 1<br>Robots:x:1002:<br><br></span></div>
+    <p></p>
+  </body>
+</html>

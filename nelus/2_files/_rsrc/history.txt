@@ -1,0 +1,35 @@
+it@bookworm-unattended:~$ history
+    4  sudo shutdown now
+    5  lsblk
+    6  sudo -i
+    7  su - Rex
+    8  history
+
+it@bookworm-unattended:~$ su
+Password:
+root@bookworm-unattended:/home/it# history
+    1  fdisk /dev/sdb
+    2  lsblk
+    3  mkfs.ext4 /dev/sdb1
+    4  ls /
+    5  mkdir -p /mnt/sdb1
+    6  mount /dev/sdb1 /mnt/sdb1
+    7  ls -l /mnt/sdb1
+    8  adduser Rex --allow-bad-names && addgroup Vegetables --allow-bad-names
+    9  cat /etc/passwd | tail -n 1
+   10  cat /etc/group | tail -n 1
+   11  nano /etc/passwd
+   12  usermod -aG sudo Rex
+   13  exit
+   14  history
+
+Rex@bookworm-unattended:~$ history
+    1  ls -l
+    2  sudo date 1114070023 && touch Alpaca && ln -s Alpaca Chi
+    3  cat << end > Alpaca
+12345
+end
+
+    4  sudo date 1114070024 && chmod 777 Alpaca
+    5  ls -l && echo -e "---done----\nMy variant is: lrwxrwxrwx 1 Rex Vegetables 6 November 14 2023 Chi ^_^ "
+    6  history

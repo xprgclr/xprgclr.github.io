@@ -1,0 +1,847 @@
+﻿​
+Liigu põhisisuni
+school logo; link to front page;
+KIT-23V, IT-süsteemide spetsialist
+Sügissemester. 
+
+02.10.2023 - 08.10.2023
+Esmaspäev 02.10.2023
+09:10-09:55
+Infotund
+Õpetaja Toivo Pärnpuu , Maret Vaher
+Ruum A-A410
+Õpperühm KIT-23V
+10:05-10:50
+Rakendustarkvara alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+11:00-11:45
+Rakendustarkvara alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+12:30-13:15
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+13:25-14:10
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+14:20-15:05
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+15:15-16:00
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+16:10-16:55
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+17:05-17:50
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+Teisipäev 03.10.2023
+08:15-09:00
+Rakendustarkvara alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+09:10-09:55
+Rakendustarkvara alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+10:05-10:50
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+11:00-11:45
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+12:30-13:15
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T411
+Õpperühm KIT-23V
+13:25-14:10
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T411
+Õpperühm KIT-23V
+14:20-15:05
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+15:15-16:00
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+16:10-16:55
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+17:05-17:50
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+Kolmapäev 04.10.2023
+08:15-09:00
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+09:10-09:55
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+10:05-10:50
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T411
+Õpperühm KIT-23V
+11:00-11:45
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T411
+Õpperühm KIT-23V
+12:30-13:15
+Rakendustarkvara alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+13:25-14:10
+Rakendustarkvara alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+14:20-15:05
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+15:15-16:00
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+Neljapäev 05.10.2023
+Reede 06.10.2023
+Auditoorne õpeArvestus/EksamE-ÕpeHarjutusIseseisev õpeLoengPraktiline tööPraktikumPraktikaSeminarTöökohapõhine õpeTagasisideRühmajuhataja/klassijuhataja tundÕppus Üksiksündmus Hõivatud
+ 
+tahvel@tugi.edu.ee
+Kasutustingimused
+Versioon 2.29.0
+
+
+​
+Liigu põhisisuni
+school logo; link to front page;
+KIT-23V, IT-süsteemide spetsialist
+Sügissemester. 
+
+16.10.2023 - 22.10.2023
+Esmaspäev 16.10.2023
+10:05-10:50
+Rakendustarkvara alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+11:00-11:45
+Rakendustarkvara alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+12:30-13:15
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+13:25-14:10
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+14:20-15:05
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+15:15-16:00
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+16:10-16:55
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+17:05-17:50
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+Teisipäev 17.10.2023
+08:15-09:00
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+09:10-09:55
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+10:05-10:50
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+11:00-11:45
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+12:30-13:15
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T411
+Õpperühm KIT-23V
+13:25-14:10
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T411
+Õpperühm KIT-23V
+14:20-15:05
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+15:15-16:00
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+Kolmapäev 18.10.2023
+08:15-09:00
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T411
+Õpperühm KIT-23V
+09:10-09:55
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T411
+Õpperühm KIT-23V
+10:05-10:50
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+11:00-11:45
+Elektrotehnika
+Õpetaja Natalia Popova
+Ruum A-A310
+Õpperühm KIT-23V
+12:30-13:15
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+13:25-14:10
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+14:20-15:05
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+15:15-16:00
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T411
+Õpperühm KIT-23V
+Neljapäev 19.10.2023
+Reede 20.10.2023
+Auditoorne õpeArvestus/EksamE-ÕpeHarjutusIseseisev õpeLoengPraktiline tööPraktikumPraktikaSeminarTöökohapõhine õpeTagasisideRühmajuhataja/klassijuhataja tundÕppus Üksiksündmus Hõivatud
+ 
+tahvel@tugi.edu.ee
+Kasutustingimused
+Versioon 2.29.0
+
+
+​
+Liigu põhisisuni
+school logo; link to front page;
+KIT-23V, IT-süsteemide spetsialist
+Sügissemester. 
+
+30.10.2023 - 05.11.2023
+Esmaspäev 30.10.2023
+10:05-10:50
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+11:00-11:45
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+12:30-13:15
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+17:05-17:50
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+Teisipäev 31.10.2023
+08:15-09:00
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+09:10-09:55
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+10:05-10:50
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+11:00-11:45
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+12:30-13:15
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+Kolmapäev 01.11.2023
+12:30-13:15
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+17:05-17:50
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+Neljapäev 02.11.2023
+Reede 03.11.2023
+Auditoorne õpeArvestus/EksamE-ÕpeHarjutusIseseisev õpeLoengPraktiline tööPraktikumPraktikaSeminarTöökohapõhine õpeTagasisideRühmajuhataja/klassijuhataja tundÕppus Üksiksündmus Hõivatud
+ 
+tahvel@tugi.edu.ee
+Kasutustingimused
+Versioon 2.29.0
+
+
+​
+Liigu põhisisuni
+school logo; link to front page;
+KIT-23V, IT-süsteemide spetsialist
+Sügissemester. 
+
+13.11.2023 - 19.11.2023
+Esmaspäev 13.11.2023
+12:30-13:15
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+Elektroonika alused
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+17:05-17:50
+Elektroonika alused
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+Teisipäev 14.11.2023
+08:15-09:00
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+09:10-09:55
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+10:05-10:50
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+11:00-11:45
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+12:30-13:15
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+17:05-17:50
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+Kolmapäev 15.11.2023
+08:15-09:00
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+09:10-09:55
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+10:05-10:50
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+11:00-11:45
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+12:30-13:15
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+17:05-17:50
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+Neljapäev 16.11.2023
+Reede 17.11.2023
+Auditoorne õpeArvestus/EksamE-ÕpeHarjutusIseseisev õpeLoengPraktiline tööPraktikumPraktikaSeminarTöökohapõhine õpeTagasisideRühmajuhataja/klassijuhataja tundÕppus Üksiksündmus Hõivatud
+ 
+tahvel@tugi.edu.ee
+Kasutustingimused
+Versioon 2.29.0
+
+
+​
+Liigu põhisisuni
+school logo; link to front page;
+KIT-23V, IT-süsteemide spetsialist
+Sügissemester. 
+
+30.10.2023 - 05.11.2023
+Esmaspäev 30.10.2023
+10:05-10:50
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+11:00-11:45
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+12:30-13:15
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+17:05-17:50
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+Teisipäev 31.10.2023
+08:15-09:00
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+09:10-09:55
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+10:05-10:50
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+11:00-11:45
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+12:30-13:15
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+Kolmapäev 01.11.2023
+12:30-13:15
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+ECDL
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+17:05-17:50
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+Neljapäev 02.11.2023
+Reede 03.11.2023
+Auditoorne õpeArvestus/EksamE-ÕpeHarjutusIseseisev õpeLoengPraktiline tööPraktikumPraktikaSeminarTöökohapõhine õpeTagasisideRühmajuhataja/klassijuhataja tundÕppus Üksiksündmus Hõivatud
+ 
+tahvel@tugi.edu.ee
+Kasutustingimused
+Versioon 2.29.0
+
+
+​
+Liigu põhisisuni
+school logo; link to front page;
+KIT-23V, IT-süsteemide spetsialist
+Sügissemester. 
+
+13.11.2023 - 19.11.2023
+Esmaspäev 13.11.2023
+12:30-13:15
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Digitaaltehnika, mikroprotsessorid ja IOT
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+Elektroonika alused
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+17:05-17:50
+Elektroonika alused
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+Teisipäev 14.11.2023
+08:15-09:00
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+09:10-09:55
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+10:05-10:50
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+11:00-11:45
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+12:30-13:15
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+17:05-17:50
+IT-süsteemide riistvara
+Õpetaja Urmas Krusell
+Ruum A-A307
+Õpperühm KIT-23V
+Kolmapäev 15.11.2023
+08:15-09:00
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+09:10-09:55
+Arvutivõrkude alused
+Õpetaja Tatjana Sinelnik
+Ruum T-T412
+Õpperühm KIT-23V
+10:05-10:50
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+11:00-11:45
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+12:30-13:15
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+13:25-14:10
+Linux / BSD-operatsioonisüsteemide kasutus
+Õpetaja Kirill Nelus
+Ruum T-T412
+Õpperühm KIT-23V
+14:20-15:05
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+15:15-16:00
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+16:10-16:55
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+17:05-17:50
+Windows-operatsioonisüsteemide kasutus
+Õpetaja Vadim Veeremaa
+Ruum T-T412
+Õpperühm KIT-23V
+Neljapäev 16.11.2023
+Reede 17.11.2023
+Auditoorne õpeArvestus/EksamE-ÕpeHarjutusIseseisev õpeLoengPraktiline tööPraktikumPraktikaSeminarTöökohapõhine õpeTagasisideRühmajuhataja/klassijuhataja tundÕppus Üksiksündmus Hõivatud
+ 
+tahvel@tugi.edu.ee
+Kasutustingimused
+Versioon 2.29.0

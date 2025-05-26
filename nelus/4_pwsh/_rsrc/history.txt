@@ -1,0 +1,24 @@
+it@bookworm-unattended:~$ history
+    5  echo -e "\nfree:" && free && echo -e "\nip a:" && ip a && echo -e "\ndf:" && df
+    6  sudo apt update && sudo apt upgrade && sudo apt install bat -y
+    7  touch pwsh-install.sh && nano pwsh-install.sh
+    8  chmod +x pwsh-install.sh && ./pwsh-install.sh
+    9  chmod +x pwsh-install.sh && sudo ./pwsh-install.sh
+   10  touch v9.awk && nano v9.awk
+   11  touch v9.ps1 && nano v9.ps1
+   12  ls
+   13  batcat pwsh-install.sh
+   14  batcat v9.awk
+   15  batcat v9.ps1
+   16  echo -e "\nfree:" && free && echo -e "\nip a:" && ip a && echo -e "\ndf:" && df
+   17  echo 0 | awk -f v9.awk
+   18  echo 1 | awk -f v9.awk
+   19  echo 2 | awk -f v9.awk
+   20  echo 3 | awk -f v9.awk
+   21  echo false | awk -f v9.awk
+   22  echo true | awk -f v9.awk
+   23  echo test | awk -f v9.awk
+   24  pwsh
+   25  echo "_______Done______"
+   26  history
+it@bookworm-unattended:~$
