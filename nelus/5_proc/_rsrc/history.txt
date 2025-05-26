@@ -1,0 +1,35 @@
+it@bookworm-unattended:~/hanoi$ history
+    6  nano capy
+    7  chmod +x capy
+    8  ./capy
+    9  echo $x
+   10  . ./capy
+   11  echo $x
+   12  batcat capy
+   13  sudo mkdir /alpaca && sudo mv capy /alpaca
+   14  nano .profile
+   15  cat .profile | highlight -O ansi -S bash
+   16  echo $PATH
+   17  exit
+   18  echo $PATH
+   19  . capy
+   20  echo $x
+   21  nano dk
+   22  chmod +x dk
+   23  batcat dk
+   24  ./dk &
+   25  ps -a
+   26  kill -9 624
+   27  apt-file search gcc | grep -P '/bin/gcc$'
+   28  sudo apt install gcc -y
+   29  mkdir hanoi
+   30  cd hanoi
+   31  nano hanoi.c
+   32  gcc hanoi.c -o hanoi -lm -lncurses
+   33  apt-file search ncurses | grep -P '/bin'
+   34  sudo apt install libncurses-dev -y
+   35  gcc hanoi.c -o hanoi -lm -lncurses
+   36  ls -l
+   37  ./hanoi
+   38  history
+it@bookworm-unattended:~/hanoi$

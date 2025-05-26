@@ -1,0 +1,51 @@
+#! /bin/bash
+
+# root ?
+
+if test `id -u` -ne 0
+then
+  echo "ur not root bro"
+  exit 1
+fi
+
+# place
+
+place=$(pwd)
+time=$(date +%s)
+
+# install
+
+if [ -f /etc/network/interfaces.0 ]
+then
+  cp /etc/network/interfaces.0 /etc/network/interfaces
+  rm -f /etc/network/interfaces.0
+fi
+
+systemctl restart networking
+
+apt -y autoremove --purge dnsmasq
+
+if [ -f /etc/hosts.0 ]
+then
+  cp /etc/hosts.0 /etc/hosts
+  rm -f /etc/hosts.0
+fi
+
+rm -rf /etc/network/if-up.d/00-firewall
+
+iptables -Z             # zero counters
+iptables -F             # flush (delete) rules
+
+iptables -t mangle -F
+iptables -X             # delete all extra chains
+
+iptables --policy INPUT   ACCEPT;
+iptables --policy OUTPUT  ACCEPT;
+iptables --policy FORWARD ACCEPT;
+
+echo 0 > /proc/sys/net/ipv4/ip_forward
+
+apt -y autoremove --purge iptables
+
+cd $place
+echo "Success (router installed)"
